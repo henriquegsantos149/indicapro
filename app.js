@@ -134,7 +134,8 @@ let userState = {
     name: "Aluno",
     email: "",
     pointsResgataveis: 0,
-    pointsPendentes: 0
+    pointsPendentes: 0,
+    referrals: []
 };
 
 // Carrega o estado sincronizado do localStorage e URL
@@ -149,11 +150,14 @@ function loadState() {
                 userState.email = "";
                 userState.pointsResgataveis = 0;
                 userState.pointsPendentes = 0;
+                userState.referrals = [];
                 saveStateToLocalStorage();
             }
             if (!userState.email) userState.email = "";
+            if (!Array.isArray(userState.referrals)) userState.referrals = [];
         } catch(e) {
             console.error("Erro ao carregar localStorage", e);
+            userState.referrals = [];
         }
     }
     
