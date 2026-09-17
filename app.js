@@ -10,7 +10,10 @@ const REWARDS_CATALOG = [
         points: 100,
         title: "Guia Digital Ambiental Pro: Carreiras Ambientais 2027",
         category: "Digital",
-        banner: `<img src="images/capa-guia-digital.jpg" alt="Guia Digital">`
+        banner: `<div class="banner-svg-wrapper" style="width: 100%; height: 180px; position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; background: #0b0d19;">
+            <div style="position: absolute; inset: -20px; background-image: url('images/capa-guia-digital.jpg'); background-size: cover; background-position: center; filter: blur(15px) brightness(0.4); z-index: 1;"></div>
+            <img src="images/capa-guia-digital.jpg" alt="Guia Digital" style="position: relative; height: 100%; width: 100%; object-fit: contain; padding: 8px; z-index: 2; box-sizing: border-box; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));">
+        </div>`
     },
     {
         id: "workshop-webgis",
