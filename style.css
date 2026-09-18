@@ -1894,3 +1894,215 @@ body {
 .offer-badge { color: #000 !important; font-weight: 900 !important; }
 .btn-neon-green { border-radius: 12px !important; color: #000 !important; font-weight: 900 !important; }
 .mec-seal-img { width: 150px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
+
+
+/* DOBLA 1: Ajustes Hero */
+.link-neon-scroll {
+    color: var(--neon-green) !important;
+    text-decoration: underline !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+    text-underline-offset: 4px;
+    box-shadow: none !important;
+}
+.link-neon-scroll:hover {
+    color: #0ea5e9 !important; /* slight change on hover if needed, or keep green */
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    background: transparent !important;
+}
+
+/* Fix Card Top Gap */
+.offer-card-premium {
+    padding: 32px 24px !important; 
+    border-radius: 20px !important;
+    border: 2px solid var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2) !important;
+    background: #0b0d19 !important;
+}
+.offer-badge {
+    background: var(--neon-green) !important;
+    color: #000000 !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 8px 16px !important;
+    border-radius: 50px !important; /* Pill shape */
+    display: inline-block;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+.offer-pap-logo {
+    width: 140px !important;
+    margin: 0 auto 16px auto !important;
+    display: block;
+}
+.offer-subtitle {
+    color: var(--neon-green) !important;
+    font-weight: 900 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin: 0 0 12px 0 !important;
+}
+.price-strikethrough {
+    font-size: 15px !important;
+    color: #94A3B8 !important;
+    margin-bottom: 4px !important;
+}
+.strikethrough-value {
+    text-decoration: line-through;
+}
+.price-main {
+    font-size: 42px !important;
+    font-weight: 900 !important;
+    margin: 0 0 8px 0 !important;
+    color: #FFFFFF !important;
+}
+.price-main span {
+    color: #FFFFFF !important;
+}
+.price-sub {
+    font-size: 14px !important;
+    color: #94A3B8 !important;
+    margin: 0 0 20px 0 !important;
+}
+.btn-neon-green {
+    background: var(--neon-green) !important;
+    color: #000000 !important;
+    border: none !important;
+    font-weight: 900 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    padding: 16px !important;
+    font-size: 15px !important;
+    text-transform: uppercase;
+}
+
+/* DOBLA 2: MEC Section */
+.mec-banner-section {
+    background: #FFFFFF !important;
+    border: none !important;
+}
+.mec-content h2 {
+    color: #0D111A !important;
+}
+.mec-content p, .mec-checklist li {
+    color: #334155 !important;
+}
+.check-icon {
+    color: var(--neon-green) !important;
+    font-weight: 900 !important;
+}
+.mec-seal-img {
+    height: 110px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: none !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* DOBLA 3: Tabs & Accordion */
+.tab-btn {
+    background: #111625 !important;
+    border-color: #1E293B !important;
+    color: #94A3B8 !important;
+}
+.tab-btn.active {
+    background: var(--neon-green) !important;
+    color: #000000 !important;
+    border-color: var(--neon-green) !important;
+}
+.accordion-header {
+    background: transparent !important;
+}
+.accordion-header:hover {
+    background: rgba(255,255,255,0.03) !important;
+}
+.acc-section-title {
+    color: var(--neon-green);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+.acc-section-title::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--neon-green);
+    border-radius: 50%;
+}
+.acc-text {
+    color: #E2E8F0;
+    font-size: 14px;
+    line-height: 1.6;
+    padding-left: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.acc-topics-title {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 24px 0 16px;
+}
+.acc-topics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    margin-bottom: 24px;
+}
+.acc-topic-item {
+    color: #94A3B8;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+}
+.acc-topic-item .check {
+    color: var(--neon-green);
+    flex-shrink: 0;
+    font-weight: 900;
+}
+.acc-bonus-box {
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255,255,255,0.03);
+}
+.acc-bonus-icon {
+    font-size: 20px;
+}
+.acc-bonus-content h5 {
+    color: var(--neon-green);
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.5px;
+}
+.acc-bonus-content p {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .acc-topics-grid { grid-template-columns: 1fr; }
+}

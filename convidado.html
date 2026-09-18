@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div style="margin-top: 24px;">
-                    <a href="#ementa" class="btn-secondary-neon smooth-scroll">CONHEÇA MAIS A NOSSA FORMAÇÃO</a>
+                    <button class="link-neon-scroll smooth-scroll" data-target="#ementa">CONHEÇA MAIS A NOSSA FORMAÇÃO</button>
                 </div>
             </section>
 
@@ -82,22 +82,22 @@
             <section class="guest-form-column">
                 <div class="interactive-flow-container" id="interactive-flow">
                     <!-- ESTADO 1 E 3: Oferta Exclusiva -->
-                    <div id="offer-state" class="offer-card-premium active">
+                    <div id="offer-state" class="offer-card-premium active" style="padding: 32px 24px;">
                         <div class="offer-badge">OFERTA ESPECIAL DE INDICAÇÃO</div>
                         <img src="images/logo-pap-branco.png" alt="Programa PAP" class="offer-pap-logo">
                         <div class="offer-header">
                             <p class="offer-subtitle">ASSINATURA ANUAL EM ATÉ</p>
                         </div>
                         <div class="offer-body">
-                            <p class="price-strikethrough">De R$ 1.497,00 por apenas:</p>
-                            <h2 class="price-main">12x de <span class="text-green">R$ 99,70</span></h2>
+                            <p class="price-strikethrough"><span class="strikethrough-value">De R$ 1.497,00</span> por apenas:</p>
+                            <h2 class="price-main">12x de <span>R$ 99,70</span></h2>
                             <p class="price-sub">ou R$ 997,00 à vista</p>
                         </div>
                         <div class="offer-action">
                             <button type="button" id="btn-show-form" class="btn-neon-green btn-full">CONFIRMAR INDICAÇÃO E LIBERAR DESCONTO</button>
-                            <a id="btn-checkout-final" href="https://plataforma.ambientalpro.com.br/checkout-pap-voomp-play-desconto" target="_blank" class="btn-neon-green btn-full hidden">GARANTIR MINHA MATRÍCULA</a>
+                            <a id="btn-checkout-final" href="https://plataforma.ambientalpro.com.br/checkout-pap-voomp-play-desconto" target="_blank" class="btn-neon-green btn-full hidden" style="display:flex; justify-content:center; align-items:center;">GARANTIR MINHA MATRÍCULA</a>
                         </div>
-                        <div class="offer-footer">
+                        <div class="offer-footer" style="margin-top: 16px;">
                             <span class="safe-icon">🔒</span> Compra 100% Segura • Assinatura Anual • Garantia 15 dias
                         </div>
                     </div>
@@ -204,143 +204,699 @@
                     
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 01: Interface, Configurações Iniciais e Vetorização Básica</span>
+                            <span class="mod-title">01 <span style="color:#64748b;">|</span> Interface e Vetorização Básica</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Introduzir a interface do QGIS e aprender a manusear sistemas de coordenadas e arquivos vetoriais básicos.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Configuração do ambiente de trabalho, importação de dados e criação de Shapefiles com vetorização inicial.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>1.1 Interface do QGIS</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.2 Sistemas de Coordenadas na prática (Datum e UTM)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.3 Arquivos Vetoriais (Criação de Shapefiles)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.4 Seleção Manual e por Localização</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.5 Seleção por Valores e Expressões</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.6 Filtro de feições (Definition Query / Query Builder)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.7 Medições práticas (comprimentos, áreas e ângulos)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
+                                <div class="acc-bonus-box">
+                                    <span class="acc-bonus-icon">✨</span>
+                                    <div class="acc-bonus-content">
+                                        <h5>AULA BÔNUS DE IA</h5>
+                                        <p>Como resolver os problemas deste módulo utilizando a Inteligência Artificial Claude</p>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 02: Importação, Tratamento e Manipulação de Dados Espaciais</span>
+                            <span class="mod-title">02 <span style="color:#64748b;">|</span> Importação e Manipulação de Dados</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Aprender a importar tabelas externas e manipular bancos de dados geoespaciais.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Integração de tabelas do Excel com geometrias do QGIS e operações internas em bancos de dados.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>2.1 Importação de Dados do Excel</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.2 Junção de Tabelas (Joins)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.3 Bancos de Dados Gratuitos (IBGE, ANA, CPRM)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.4 Extraindo Dados do OSM (OpenStreetMap)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.5 Importando dados de uma WMS/WFS</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.6 Trabalhando com GeoPackage (.gpkg)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.7 Por dentro da Tabela de Atributos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.8 Inserindo Fotos na Tabela de Atributos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
+                                <div class="acc-bonus-box">
+                                    <span class="acc-bonus-icon">✨</span>
+                                    <div class="acc-bonus-content">
+                                        <h5>AULA BÔNUS DE IA</h5>
+                                        <p>Como resolver os problemas deste módulo utilizando a Inteligência Artificial Claude</p>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 03: Geoprocessamento Avançado e Análise Vetorial</span>
+                            <span class="mod-title">03 <span style="color:#64748b;">|</span> Ferramentas de Geoprocessamento</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Dominar as principais ferramentas de análise vetorial e georreferenciamento de arquivos estáticos.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Aplicação prática de buffers, recortes, uniões e retificação de imagens escaneadas no QGIS.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>3.1 Buffer (Simples, Normal e em Batelada)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.2 Dissolve (Limpeza geral e por atributos)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.3 Recorte, Interseção e União</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.4 Mesclagem de Camadas e de Atributos (Merge)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.5 Ferramentas de Edição Vetorial Avançada</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.6 Georreferenciamento de Imagens</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Extra: Cálculos de áreas em várias Zonas UTM (Albers)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
+                                <div class="acc-bonus-box">
+                                    <span class="acc-bonus-icon">✨</span>
+                                    <div class="acc-bonus-content">
+                                        <h5>AULA BÔNUS DE IA</h5>
+                                        <p>Como resolver os problemas deste módulo utilizando a Inteligência Artificial Claude</p>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 04: Simbologia, Rótulos e Elaboração de Mapas Profissionais para Licenciamento</span>
+                            <span class="mod-title">04 <span style="color:#64748b;">|</span> Desvendando as Simbologias</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Aprender as técnicas cartográficas de representação de dados quantitativos e qualitativos.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Renderização estética de mapas temáticos usando simbologia graduada, proporcional e categorizada.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>4.1 Símbolos Simples e Categorizados</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.2 Símbolos Graduados</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.3 Centróides e Símbolos Graduados Proporcionais</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.4 Simbologia Baseada em Regras</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.5 Importando e Exportando Estilos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 05: Modelos Digitais de Elevação e Análise de Relevo</span>
+                            <span class="mod-title">05 <span style="color:#64748b;">|</span> Labels (Rótulos) e Etiquetas</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Aprender a inserir e configurar rótulos e etiquetas dinâmicas de forma profissional no mapa.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Formatação de fontes externas, posicionamento inteligente de rótulos e expressões em script para exibição de texto.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>5.1 Noções Básicas de Rótulos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.2 Inserindo fontes externas</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.3 Reposicionamento de rótulos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.4 Salvando estilos de rótulo (Style Manager)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.5 Regras e Expressões</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.6 Etiquetas e Anotações</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 06: Análises Espaciais e Estatísticas Avançadas</span>
+                            <span class="mod-title">06 <span style="color:#64748b;">|</span> Modelos Digitais de Elevação</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Compreender o relevo e a altimetria de uma região utilizando arquivos raster e de elevação espacial.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Geração de declividade, curvas de nível, sombreamento e orientação de encostas a partir de dados MDE.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>6.1 Introdução aos MDEs</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.2 Como baixar Modelos Digitais de Terreno (MDT) e Superfície (MDS)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.3 Sombreamento (Hillshade)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.4 Declividade (Slope)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.5 Orientação de Encostas (Aspect)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.6 Curvatura (Perfil e Tangencial)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.7 Gerando Curvas de Nível a partir do MDE</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 07: Gráficos e Labelling Avançado</span>
+                            <span class="mod-title">07 <span style="color:#64748b;">|</span> Análises Espaciais e Estatísticas</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Trabalhar com interpolações e estatísticas espaciais para representação contínua de fenômenos pontuais.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Uso de interpoladores por krigagem, IDW e densidade de Kernel para mapas de calor.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>7.1 Estatística Básica para Dados Vetoriais e Matriciais</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.2 Interpolação IDW (Inverso da Distância)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.3 Interpolação por Krigagem</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.4 Densidade de Kernel (Mapa de Calor)</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 08: Ferramentas de Hidrologia</span>
+                            <span class="mod-title">08 <span style="color:#64748b;">|</span> Gráficos e Labelling Avançado</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Aprender a associar gráficos estatísticos e rótulos avançados aos mapas.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Uso da extensão Data Plotly no QGIS para elaboração de gráficos integrados diretamente às feições do mapa.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>8.1 Gráficos com Data Plotly</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.2 Cores: Do Mapa para o Gráfico no Data Plotly</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.3 Histograma</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.4 Gráfico de Dispersão (Scatter Plot)</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 09: Sensoriamento Remoto: A Base</span>
+                            <span class="mod-title">09 <span style="color:#64748b;">|</span> Ferramentas de Hidrologia</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Aprender o processo completo de delimitação de bacias hidrográficas e modelagem de drenagem.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Operações de fill sinks, direção de fluxo, delimitação de exutórios e design do mapa de bacia hidrográfica final.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>9.1 Download e Instalação Avançada para o Módulo</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.2 Trabalhando com dados da ANA (Formato GPKG)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.3 Definindo Área de Estudo</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.4 Importação do Modelo Digital de Elevação (MDE)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.5 Preenchendo Falhas (Fill Sinks)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.6 Direção do Fluxo (Local Drain Direction)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.7 Rede de Drenagem e Classificação dos Corpos Hídricos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.8 Definição do Exutório e Geração da Bacia de Drenagem</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.9 Vetorização dos Trechos de Drenagem</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.10 Map Design & Layout do Mapa de Área de Contribuição</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 10: Processamento de Imagens</span>
+                            <span class="mod-title">10 <span style="color:#64748b;">|</span> Sensoriamento Remoto: A Base</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Aprender os conceitos físicos que regem os sistemas sensores orbitais e a captação de imagens de satélite.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Conhecimento do espectro eletromagnético, tipos de resolução e identificação de satélites adequados para projetos.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>10.1 Introdução aos Sistemas Sensores</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.2 Desvendando o Espectro Eletromagnético</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.3 Os Diferentes Tipos de Resolução (Espacial, Espectral, Temporal)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.4 Plataformas e Catálogos para Aquisição de Imagens</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 11: Classificação e Mapas de Uso do Solo</span>
+                            <span class="mod-title">11 <span style="color:#64748b;">|</span> Processamento de Imagens</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Aplicar composições de bandas coloridas e índices de reflectância espectral sobre dados orbitais.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Manipulação de imagens Sentinel/Landsat, fusão pancromática e geração de mapas de vegetação.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>11.1 Imagem de Cor Verdadeira (TCI)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.2 Fusão com a Pancromática (Pansharpening para melhoria de resolução)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.3 Composição Falsa Cor</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.4 Índice NDVI (Índice de Vegetação por Diferença Normalizada)</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span class="mod-title">Módulo 12: Módulo PAP.IA | Exercícios com Inteligência Artificial</span>
+                            <span class="mod-title">12 <span style="color:#64748b;">|</span> Classificação e Mapas de Uso do Solo</span>
                             <span class="mod-icon">⌵</span>
                         </button>
                         <div class="accordion-body">
                             <div class="accordion-inner">
-                                <p>Conteúdo detalhado das aulas deste módulo, do básico ao avançado.</p>
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Mapear a cobertura e uso do solo utilizando classificação automática de imagens de satélite.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Uso de classificadores supervisionados, não-supervisionados e segmentação OBIA no QGIS.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>12.1 Introdução e Tipos de Classificação</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.2 Classificação Não-Supervisionada</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.3 Classificação Supervisionada (SCP Plugin)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.4 Segmentação e Classificação baseada em Objeto (OBIA)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.5 Dissolvendo e Calculando Área das Classes de Uso do Solo</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">13 <span style="color:#64748b;">|</span> Módulo PAP.IA | Exercícios com Inteligência Artificial</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Integrar inteligência artificial ao seu fluxo de trabalho.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Resolução de exercícios práticos utilizando IA no QGIS.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>Módulo 1: PAP.IA | Exercício com IA (Antigravity)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Módulo 2: PAP.IA | Exercício com IA (Claude Code)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Módulo 3: PAP.IA | Exercício com IA (Claude + QGIS MCP)</span></div>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="syllabus-content hidden" id="arcgis-pro">
-                <p class="placeholder-text">Conteúdo do ArcGIS Pro (Acesso vitalício)</p>
+                <div class="accordion">
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">01 <span style="color:#64748b;">|</span> Introdução e Interface</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Ambientação completa na interface Ribbon do ArcGIS Pro e configuração de sistemas geodésicos.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Configurações de projetos, shapefiles, definition query e medições espaciais básicas no ArcGIS Pro.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>1.1 Interface do ArcGIS Pro</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.2 Sistemas de coordenadas na prática</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.3 Arquivos Vetoriais (O famoso Shapefile)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.4 Seleção Manual e por Localização</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.5 Seleção por Atributos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.6 Definition Query (Filtros avançados)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.7 Ferramenta Measure (Medição)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.8 Locate para identificação de locais e atributos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">02 <span style="color:#64748b;">|</span> Importação e Manipulação de Dados</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Gerenciamento de geodatabases e importação de bases de dados tabulares externas.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Criação de Geodatabases corporativos e pessoais, importação de planilhas de campo e anexo de imagens.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>2.1 Importação de Dados do Excel</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.2 Bancos de Dados Geográficos Gratuitos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.3 Geodatabase - O que é e quais as vantagens</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.4 Imagem como Atributo na Tabela</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">03 <span style="color:#64748b;">|</span> Ferramentas de Geoprocessamento</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Uso das ferramentas de proximidade, sobreposição e edição topológica de arquivos vetoriais e CAD.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Cruzamento de limites, buffers em lote, georreferenciamento de arquivos raster e desenhos em CAD/DWG.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>3.1 Buffer e delimitação em lote</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.2 Tudo sobre o Dissolve</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.3 Clip, Intersect e Union</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.4 Os 2 tipos de Merge (Mesclagem)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.5 Ferramentas de Edição Vetorial</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.6 Georreferenciamento de Imagens</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.7 Georreferenciando DWG e Shapefile</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.8 Atribuindo Dimensões (Estilo CAD)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">04 <span style="color:#64748b;">|</span> Desvendando as Simbologias</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Desenvolver cartografias complexas utilizando a biblioteca nativa do ArcGIS Pro.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Aplicação de estilos e simbologias quantitativas e qualitativas sobre camadas raster e vetor.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>4.1 Simbologia de Valores Únicos e Paleta de Cores</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.2 Simbologia por Quantidade (Rampas de Cores)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.3 Simbologias em dados Raster</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.4 Técnicas Avançadas de Simbologia e Efeitos Visuais</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">05 <span style="color:#64748b;">|</span> Labels (Rótulos) e Anotações</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Configurar identificações inteligentes de feições no ArcGIS Pro.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Criação de classes de anotação de banco de dados, expressões em Arcade/Python para rótulos e etiquetas dinâmicas.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>5.1 Opções Básicas de Labelling</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.2 Descobrindo e inserindo fontes externas</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.3 Anotação e Reposicionamento Manual das Etiquetas</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.4 Texto como elemento Gráfico</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.5 Expressões (scripts) para Labels dinâmicos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">06 <span style="color:#64748b;">|</span> Modelos Digitais de Elevação</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Processamento de relevo tridimensional e altimetria no ArcGIS Pro.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Utilização do Living Atlas e download de MDEs para cálculo de hipsometria, sombreamento e declividades.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>6.1 Introdução aos MDEs</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.2 Download do MDE</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.3 Conhecendo e explorando o Living Atlas</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.4 Relevo Sombreado (Hillshade)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.5 Declividade (Slope)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.6 Orientação e Curvatura (Aspect e Curvature)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">07 <span style="color:#64748b;">|</span> Modelagem 3D e TIN</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Geração e edição de malhas triangulares de relevo (TIN) e simulações tridimensionais.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Visualizações de terrenos em 3D, cálculos volumétricos de corte e aterro, e simulação de inundação animada.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>7.1 Extração de Curvas de Nível</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.2 Geração de Redes Irregulares de Triângulos (TIN)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.3 Ferramentas para Edição de TIN</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.4 Visualização 3D do terreno</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.5 Simulação de Inundação (Criando Animações de Cheia)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.6 Cálculo de Corte e Aterro (Volume)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.7 Visualização de Dados de Empreendimentos em 3D</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">08 <span style="color:#64748b;">|</span> Análises Espaciais e Estatísticas</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Manipular ferramentas avançadas de estatística espacial no ArcGIS Pro.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Uso do Geostatistical Wizard, análises de hot-spots e engenharia exploratória de dados.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>8.1 Por dentro do Data Engineering</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.2 Interpolação IDW</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.3 Interpolação por Krigagem</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.4 Densidade de Kernel (Mapa de Calor)</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">09 <span style="color:#64748b;">|</span> Elaboração de Gráficos</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Elaborar representações estatísticas integradas aos atributos espaciais.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Montagem de histogramas, dispersões e gráficos de barras com dados geográficos ativos.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>9.1 Elaboração de Gráficos e Visualizações Integradas</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">10 <span style="color:#64748b;">|</span> Ferramentas de Hidrologia</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Delimitar microbacias e bacias hidrográficas de maneira totalmente automatizada no ArcGIS Pro.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Cálculo de acúmulo de fluxo, extração automática de bacias, suavização de drenagens e design do layout final.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>10.1 Importando Dados Oficiais da ANA (Trechos e Bacias)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.2 Definição da Área de Estudo</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.3 Importação do Modelo Digital de Elevação (MDE)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.4 Preenchendo Falhas (Fill Sinks)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.5 Direção do Fluxo Hidrológico</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.6 Cálculo do Acúmulo de Fluxo Hidrológico</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.7 Rede de Drenagem e Classificação dos Corpos Hídricos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.8 Definição do Exutório e Geração da Bacia de Drenagem</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.9 Suavização de Linhas e Técnicas de Visualização (Map Design)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.10 Elaboração de Layout (Montagem do Mapa Final)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>🎥 Live #042 — Hidrologia: Tutorial Supremo no ArcGIS Pro</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">11 <span style="color:#64748b;">|</span> Sensoriamento Remoto: A Base</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Entender os pilares espectrais de aquisição de imagens orbitais.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Uso das ferramentas do ArcGIS Pro conectadas ao Living Atlas e catálogos internacionais.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>11.1 Introdução aos Sistemas Sensores</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.2 Desvendando o Espectro Eletromagnético</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.3 Os Diferentes Tipos de Resolução</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.4 Plataformas para Aquisição de Imagens</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">12 <span style="color:#64748b;">|</span> Processamento de Imagens</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Tratamento digital de imagens espectrais no ArcGIS Pro.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Geração de pansharpening, cálculo de NDVI, NDMI e detecção temporal de mudanças.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>12.1 Imagem de cor verdadeira (TCI)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.2 Fusão com a Pancromática (Pansharpening)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.3 Composição Falsa Cor</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.4 Índice NDVI</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.5 Index Database e NDMI</span></div><div class="acc-topic-item"><span class="check">✓</span><span>🎥 Live #072 — Detecção de Mudanças no ArcGIS Pro</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">13 <span style="color:#64748b;">|</span> Classificação e Mapas de Uso do Solo</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Mapeamento temático automatizado de cobertura e uso do solo.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Uso do Image Classification Wizard e classificações orientadas a objetos (OBIA) no ArcGIS Pro.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>13.1 Introdução e Tipos de Classificação</span></div><div class="acc-topic-item"><span class="check">✓</span><span>13.2 Classificação Não-Supervisionada</span></div><div class="acc-topic-item"><span class="check">✓</span><span>13.3 Classificação Supervisionada</span></div><div class="acc-topic-item"><span class="check">✓</span><span>13.4 Classificação baseada em Objeto (OBIA)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>13.5 Juntando as Classes e Calculando a Área do Solo</span></div><div class="acc-topic-item"><span class="check">✓</span><span>🎥 Live #060 — Classificação de Imagem para Uso do Solo</span></div><div class="acc-topic-item"><span class="check">✓</span><span>🎥 Live #062 — Deep Learning com Modelos Pré-Treinados no ArcGIS Pro</span></div><div class="acc-topic-item"><span class="check">✓</span><span>🎥 Live #068 — Georreferenciamento e Vetorização no ArcGIS Pro</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="syllabus-content hidden" id="arcmap">
-                <p class="placeholder-text">Conteúdo do ArcMap (Desktop)</p>
+                <div class="accordion">
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">01 <span style="color:#64748b;">|</span> Interface, Vetores e Importação</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Trabalhar com a interface clássica do ArcMap, tabelas Excel e arquivos shapefile.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Digitalização vetorial básica, conexão do ArcCatalog, joins de tabelas e queries de seleção.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>1.1 Interface do ArcMap</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.2 Sistemas de Coordenadas na prática</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.3 Seleção e Definition Query</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.4 Seleção e Definition Query (Parte 2)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.5 Desvendando os operadores lógicos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.6 Windows, Measure e Find</span></div><div class="acc-topic-item"><span class="check">✓</span><span>1.7 Formatos e conexões do ArcGIS</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.1 Importação de Dados do Excel</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.2 Bancos de Dados grátis online</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.3 Trabalhando com a Tabela de Atributos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.4 Extraindo dados do OpenStreetMap</span></div><div class="acc-topic-item"><span class="check">✓</span><span>2.5 Adicionando Imagens na Tabela de Atributos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">02 <span style="color:#64748b;">|</span> Geoprocessamento, Simbologia e MDE</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Dominar as principais ferramentas de análise espacial clássicas do ArcMap.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Criação de buffers, clip, intersect, simbologias temáticas, relevo sombreado e curvas de nível.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>3.1 Buffer</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.2 Clip, Intersect e Union</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.3 Os 2 tipos de Merge (Mesclagem)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.4 Dissolve</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.5 Ferramentas de edição vetorial</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.6 Georreferenciamento de Imagens e Cartas</span></div><div class="acc-topic-item"><span class="check">✓</span><span>3.7 Georreferenciando DWG e Shapefile</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.1 Desvendando o Symbol Selector</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.2 Simbologia de dados raster e vetores</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.3 Configurações básicas de Rótulos (Labels)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>4.4 Máscaras e efeitos visuais</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.1 Introdução aos MDEs</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.2 Hillshade (Sombreamento) e Perfil de Elevação</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.3 Aspect, Slope e 3D no ArcScene</span></div><div class="acc-topic-item"><span class="check">✓</span><span>5.4 Curvas de nível e Viewshed</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">03 <span style="color:#64748b;">|</span> Análises 3D, Estatística e Hidrologia</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Operar com modelagens ambientais, krigagem e traçado de bacias hidrográficas.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Cálculos de corte e aterro, simulação de inundação no ArcScene, interpolações e balanço hídrico.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>6.2 Simulação de inundação 3D no ArcScene</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.3 Dados a partir do Google Earth e TCX Converter</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.4 Corte e Aterro (Volume)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>6.5 Visualização de dados em 3D</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.1 Ferramentas Geoestatísticas (Geostatistical Analyst)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.2 Interpolação IDW e Krigagem</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.4 Análise de Hotspot</span></div><div class="acc-topic-item"><span class="check">✓</span><span>7.5 Mapa de densidade Kernel</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.2 Gráfico de Dispersão (ScatterPlot)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.3 Criando Relatórios</span></div><div class="acc-topic-item"><span class="check">✓</span><span>8.4 Labelling Avançado (Maplex Engine)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.1 Traçando bacias hidrográficas do zero</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.2 Vetorizando a rede de drenagem clássica</span></div><div class="acc-topic-item"><span class="check">✓</span><span>9.3 Classificação da Bacia e Balanço Hídrico</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Resolução comentada do Exercício</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">04 <span style="color:#64748b;">|</span> Sensoriamento Remoto e Classificação</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p class="acc-section-title">OBJETIVO DO MÓDULO</p>
+                                <p class="acc-text">Processar imagens Sentinel e Landsat para confecção de mapas de uso do solo.</p>
+
+                                <p class="acc-section-title" style="margin-top: 16px;">FOCO PRÁTICO E APLICAÇÃO</p>
+                                <p class="acc-text">Composição de bandas, Pansharpening e classificação supervisionada e não-supervisionada.</p>
+
+                                <p class="acc-topics-title">TÓPICOS E AULAS PRÁTICAS:</p>
+                                <div class="acc-topics-grid">
+                                    <div class="acc-topic-item"><span class="check">✓</span><span>10.1 Introdução ao sensoriamento remoto</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.2 Satélites e Sensores (Landsat, Sentinel)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>10.3 Plataformas para aquisição dos dados</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.1 Composição de Bandas Espectrais</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.2 Relação de bandas para mapeamento de Queimadas</span></div><div class="acc-topic-item"><span class="check">✓</span><span>11.4 Pan Sharpening (Melhoria de Resolução Espacial)</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.1 Classificação Não-Supervisionada</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.2 Classificação Supervisionada</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.3 Limpeza e generalização de pixels classificados</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.4 Inserção de elementos extras</span></div><div class="acc-topic-item"><span class="check">✓</span><span>12.5 Cálculo de área e percentual das classes de solo</span></div><div class="acc-topic-item"><span class="check">✓</span><span>Exercícios práticos</span></div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="syllabus-content hidden" id="especialistas">
                 <p class="placeholder-text">Acesso aos Cursos de Especialistas Convidados</p>
