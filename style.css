@@ -2106,3 +2106,95 @@ body {
 @media (max-width: 768px) {
     .acc-topics-grid { grid-template-columns: 1fr; }
 }
+
+
+
+/* =========================================================
+   OVERRIDE FINAL - REGRAS ESTritas DO MANUAL
+   ========================================================= */
+
+/* DOBRA 1: Offer Card */
+.offer-card-premium {
+    border-radius: 16px !important;
+    border: 2px solid var(--neon-green) !important;
+}
+
+.offer-badge {
+    background: transparent !important;
+    color: var(--neon-green) !important;
+    border: 1px solid var(--neon-green) !important;
+    font-size: 11px !important;
+    padding: 6px 16px !important;
+}
+
+.btn-neon-green {
+    background: linear-gradient(90deg, #10B981, #00E676) !important;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    border-radius: 16px 0px 16px 0px !important;
+}
+
+/* DOBRA 2: MEC Section Full Width */
+.mec-banner-section {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    background-color: #FFFFFF !important;
+    padding: 60px 0 !important;
+    border: none !important;
+}
+.mec-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.mec-content {
+    text-align: left;
+}
+
+/* DOBRA 3: Accordion Ativo e Layout Numérico */
+.accordion-item {
+    border: 1px solid #1f2235;
+    transition: all 0.3s ease;
+}
+.accordion-item.open {
+    border: 1px solid var(--neon-green) !important;
+}
+.accordion-item.open .mod-title-text {
+    color: var(--neon-green) !important;
+}
+.accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px !important;
+}
+.mod-number {
+    background: var(--neon-green);
+    color: #000;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px 0px 8px 0px; /* Same brand shape optionally, or just rounded */
+    border-radius: 12px; /* Screenshot shows a rounded rect like pill but squarish */
+    flex-shrink: 0;
+}
+.mod-title-text {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 15px;
+    flex-grow: 1;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+/* Tab Ativa */
+.tab-btn.active {
+    background-color: #10B981 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    border-color: #10B981 !important;
+}
