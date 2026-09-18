@@ -1496,3 +1496,395 @@ body {
     text-shadow: 0 0 8px rgba(16,185,129,0.4);
 }
 
+
+
+
+/* ==========================================================================
+   NOVA SEÇÃO DE CAPTAÇÃO (OFERTA EXCLUSIVA / HERÓI DIREITO)
+   ========================================================================== */
+.interactive-flow-container {
+    width: 100%;
+    position: relative;
+    min-height: 480px;
+}
+
+/* Estado de Oferta */
+.offer-card-premium {
+    background: #0b0d19;
+    border: 2px solid var(--neon-green);
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 0 24px rgba(16, 185, 129, 0.15);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.offer-card-premium.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.offer-badge {
+    background: var(--neon-green);
+    color: #0b0d19;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 20px;
+    align-self: center;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.offer-header h4 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-light);
+    line-height: 1.2;
+}
+
+.price-strikethrough {
+    font-size: 14px;
+    color: #a1a1aa;
+    text-decoration: line-through;
+    margin-bottom: 4px;
+}
+
+.price-main {
+    font-size: 38px;
+    font-weight: 900;
+    margin: 0 0 4px 0;
+    color: var(--text-light);
+}
+
+.price-sub {
+    font-size: 12px;
+    color: #a1a1aa;
+    margin: 0;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.offer-footer {
+    font-size: 11px;
+    color: #a1a1aa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* Formulário Card */
+.guest-form-card {
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    position: relative;
+    z-index: 5;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px 24px;
+}
+
+.guest-form-card.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.btn-secondary-neon {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 1px solid var(--neon-green);
+    background: transparent;
+    color: var(--neon-green);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-neon:hover {
+    background: rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+/* ==========================================================================
+   BANNER MEC
+   ========================================================================== */
+.mec-banner-section {
+    background: #ffffff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e4e4e7;
+    border-bottom: 1px solid #e4e4e7;
+    margin: 60px 0;
+}
+
+.mec-container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.mec-badge {
+    flex-shrink: 0;
+}
+
+.mec-seal-circle {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, #d4af37, #aa7c11);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0b0d19;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    border: 4px solid #fff;
+    position: relative;
+}
+
+.mec-seal-circle::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #d4af37, #aa7c11);
+    border-radius: 4px 20px 20px 20px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.mec-seal-top {
+    font-size: 11px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.mec-seal-pelo {
+    font-size: 10px;
+    font-weight: 700;
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.mec-seal-pelo .stars {
+    font-size: 12px;
+}
+.mec-seal-main {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.mec-content h2 {
+    color: #0b0d19;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+
+.mec-content p {
+    color: #3f3f46;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.mec-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.mec-checklist li {
+    color: #18181b;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.check-icon {
+    color: var(--neon-green);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .mec-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mec-checklist {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+/* ==========================================================================
+   SEÇÃO DE EMENTA (SYLLABUS)
+   ========================================================================== */
+.syllabus-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.syllabus-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.syllabus-header h2 {
+    font-size: 36px;
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+}
+
+.syllabus-header p {
+    color: #a1a1aa;
+    font-size: 16px;
+}
+
+.syllabus-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 1px solid #3f3f46;
+    color: #a1a1aa;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: #52525b;
+    color: #e4e4e7;
+}
+
+.tab-btn.active {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+}
+
+.syllabus-content {
+    display: none;
+}
+
+.syllabus-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #71717a;
+    padding: 40px;
+    border: 1px dashed #3f3f46;
+    border-radius: 8px;
+}
+
+/* Accordion */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accordion-item {
+    background: #121420;
+    border: 1px solid #1f2235;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #171a2a;
+}
+
+.mod-icon {
+    font-size: 18px;
+    color: var(--neon-green);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.open .mod-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion-inner {
+    padding: 0 24px 24px 24px;
+    color: #a1a1aa;
+    font-size: 14px;
+    line-height: 1.6;
+}

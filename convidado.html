@@ -71,98 +71,302 @@
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- DIREITA: MINI CADASTRO E CHECKOUT -->
-            <section class="guest-form-column">
-                <div class="guest-form-card">
-                    <div class="form-header">
-                        <h3>Garanta sua vaga com desconto</h3>
-                        <p>Preencha os campos abaixo para validar a indicação e habilitar o seu link de matrícula com desconto exclusivo.</p>
-                    </div>
-
-                    <!-- FORMULÁRIO DE CADASTRO -->
-                    <form id="ref-lead-form" class="ref-lead-form">
-                        
-                        <!-- Nome e E-mail -->
-                        <div class="form-row">
-                            <div class="form-group-custom">
-                                <label for="lead-name">Nome Completo</label>
-                                <input type="text" id="lead-name" placeholder="Digite seu nome" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group-custom">
-                                <label for="lead-email">E-mail Acadêmico/Profissional</label>
-                                <input type="email" id="lead-email" placeholder="nome@exemplo.com" required>
-                            </div>
-                        </div>
-
-                        <!-- Relação com Indicador -->
-                        <div class="form-row">
-                            <div class="form-group-custom">
-                                <label for="lead-relation">Qual sua relação com o indicador?</label>
-                                <select id="lead-relation" required>
-                                    <option value="" disabled selected>Selecione uma opção</option>
-                                    <option value="Amigo">Amigo</option>
-                                    <option value="Colega de trabalho">Colega de trabalho</option>
-                                    <option value="Parente">Parente</option>
-                                    <option value="Rede social">Rede social</option>
-                                    <option value="Outro">Outro</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Atuação Profissional -->
-                        <div class="form-row">
-                            <div class="form-group-custom">
-                                <label for="lead-occupation">Atuação profissional</label>
-                                <select id="lead-occupation" required>
-                                    <option value="" disabled selected>Selecione uma opção</option>
-                                    <option value="Estudante">Estudante</option>
-                                    <option value="Autônomo/Consultor (PJ)">Autônomo/Consultor (PJ)</option>
-                                    <option value="Estagiário">Estagiário</option>
-                                    <option value="Profissional Contratado">Profissional Contratado</option>
-                                    <option value="Líder / Gestor / Tomador de Decisões">Líder / Gestor / Tomador de Decisões</option>
-                                    <option value="Pesquisador">Pesquisador</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Hobby ou Interesse -->
-                        <div class="form-row">
-                            <div class="form-group-custom">
-                                <label for="lead-hobby">Qual seu principal Hobby ou interesse na área?</label>
-                                <input type="text" id="lead-hobby" placeholder="Ex: Criação de mapas, Licenciamento, WebGIS, etc." required>
-                            </div>
-                        </div>
-
-                        <button type="submit" id="submit-lead-btn" class="form-submit-btn">
-                            Confirmar Indicação e Liberar Desconto
-                        </button>
-                    </form>
-
-                    <!-- MENSAGEM DE SUCESSO -->
-                    <div id="lead-success-msg" class="lead-success-card hidden">
-                        <span class="success-icon">✓</span>
-                        <h4>Indicação validada com sucesso!</h4>
-                        <p>Seu cupom de desconto foi aplicado. O botão de checkout oficial foi liberado abaixo.</p>
-                    </div>
-
-                    <!-- BOTAO DE CHECKOUT OFICIAL (INICIALMENTE BLOQUEADO) -->
-                    <div class="checkout-action-area">
-                        <a id="checkout-cta-btn" href="https://plataforma.ambientalpro.com.br/checkout-pap-voomp-play-desconto" target="_blank" class="checkout-cta-btn disabled" aria-disabled="true" style="padding: 12px 10px; font-size: 11.5px; white-space: nowrap; gap: 6px;">
-                            <span class="lock-icon">🔒</span>
-                            <span class="cta-label">Ir para o Checkout Oficial com Desconto</span>
-                        </a>
-                        <p class="checkout-hint">Preencha o formulário acima para destravar este link.</p>
-                    </div>
-
+                <div style="margin-top: 24px;">
+                    <a href="#ementa" class="btn-secondary-neon smooth-scroll">CONHEÇA MAIS A NOSSA FORMAÇÃO</a>
                 </div>
             </section>
 
+            <!-- DIREITA: MINI CADASTRO E CHECKOUT -->
+            
+            <!-- DIREITA: OFERTA E CADASTRO -->
+            <section class="guest-form-column">
+                <div class="interactive-flow-container" id="interactive-flow">
+                    <!-- ESTADO 1 E 3: Oferta Exclusiva -->
+                    <div id="offer-state" class="offer-card-premium active">
+                        <div class="offer-badge">OFERTA ESPECIAL DE INDICAÇÃO</div>
+                        <div class="offer-header">
+                            <h4>Programa PAP<br><span class="text-green">Ambiental Pro</span></h4>
+                        </div>
+                        <div class="offer-body">
+                            <p class="price-strikethrough">De R$ 1.497,00 por apenas:</p>
+                            <h2 class="price-main">12x de <span class="text-green">R$ 99,70</span></h2>
+                            <p class="price-sub">ou R$ 997,00 à vista (Condição exclusiva por indicação)</p>
+                        </div>
+                        <div class="offer-action">
+                            <button type="button" id="btn-show-form" class="btn-neon-green btn-full">CONFIRMAR INDICAÇÃO E LIBERAR DESCONTO</button>
+                            <a id="btn-checkout-final" href="https://plataforma.ambientalpro.com.br/checkout-pap-voomp-play-desconto" target="_blank" class="btn-neon-green btn-full hidden">GARANTIR MINHA MATRÍCULA</a>
+                        </div>
+                        <div class="offer-footer">
+                            <span class="safe-icon">🔒</span> Compra 100% Segura • Assinatura Anual • Garantia 15 dias
+                        </div>
+                    </div>
+
+                    <!-- ESTADO 2: Formulário (Invisível no início) -->
+                    <div id="form-state" class="guest-form-card hidden">
+                        <div class="form-header">
+                            <h3 style="font-size: 20px;">Garanta sua vaga com desconto</h3>
+                            <p>Preencha os campos para validar sua indicação.</p>
+                        </div>
+                        <form id="ref-lead-form" class="ref-lead-form">
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-name">Nome Completo</label>
+                                    <input type="text" id="lead-name" placeholder="Digite seu nome" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-email">E-mail</label>
+                                    <input type="email" id="lead-email" placeholder="nome@exemplo.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-relation">Qual sua relação com o indicador?</label>
+                                    <select id="lead-relation" required>
+                                        <option value="" disabled selected>Selecione uma opção</option>
+                                        <option value="Amigo">Amigo</option>
+                                        <option value="Colega de trabalho">Colega de trabalho</option>
+                                        <option value="Parente">Parente</option>
+                                        <option value="Rede social">Rede social</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-occupation">Atuação profissional</label>
+                                    <select id="lead-occupation" required>
+                                        <option value="" disabled selected>Selecione uma opção</option>
+                                        <option value="Estudante">Estudante</option>
+                                        <option value="Autônomo/Consultor (PJ)">Autônomo/Consultor (PJ)</option>
+                                        <option value="Estagiário">Estagiário</option>
+                                        <option value="Profissional Contratado">Profissional Contratado</option>
+                                        <option value="Líder / Gestor">Líder / Gestor</option>
+                                        <option value="Pesquisador">Pesquisador</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-hobby">Seu principal interesse na área?</label>
+                                    <input type="text" id="lead-hobby" placeholder="Ex: Criação de mapas, WebGIS, etc." required>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit-lead-btn" class="form-submit-btn">Avançar e Liberar Desconto</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
         </main>
+
+        <!-- BANNER INSTITUCIONAL MEC -->
+        <section class="mec-banner-section">
+            <div class="mec-container">
+                <div class="mec-badge">
+                    <div class="mec-seal-circle">
+                        <p class="mec-seal-top">RECONHECIDO</p>
+                        <p class="mec-seal-pelo">PELO <span class="stars">★★★★★</span></p>
+                        <h2 class="mec-seal-main">MEC</h2>
+                    </div>
+                </div>
+                <div class="mec-content">
+                    <h2>CURSO DE EXTENSÃO UNIVERSITÁRIA</h2>
+                    <p>Curso de Extensão Universitária em Geoprocessamento, Sensoriamento Remoto e produção de mapas profissionais, com certificado com carga horária de 200 horas validado pelo Ministério da Educação (MEC).</p>
+                    <ul class="mec-checklist">
+                        <li><span class="check-icon">✓</span> Carga Horária de 200 Horas</li>
+                        <li><span class="check-icon">✓</span> Válido em todo o território nacional</li>
+                        <li><span class="check-icon">✓</span> Enriquece o Currículo Lattes</li>
+                        <li><span class="check-icon">✓</span> Garante pontuação em concursos públicos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EMENTA / O QUE VOCE VAI APRENDER -->
+        <section id="ementa" class="syllabus-section">
+            <div class="syllabus-header">
+                <h2>O QUE VOCÊ VAI <span class="text-green">APRENDER?</span></h2>
+                <p>Escolha o conteúdo principal abaixo para visualizar os módulos e tópicos detalhados.</p>
+            </div>
+            
+            <div class="syllabus-tabs">
+                <button class="tab-btn active" data-target="qgis"><span class="icon">🌍</span> QGIS</button>
+                <button class="tab-btn" data-target="arcgis-pro">ArcGIS Pro</button>
+                <button class="tab-btn" data-target="arcmap">ArcMap (Desktop)</button>
+                <button class="tab-btn" data-target="especialistas">Cursos de Especialistas</button>
+                <button class="tab-btn" data-target="ia">Minicurso de IA</button>
+                <button class="tab-btn" data-target="lives">Gravação das Lives (+107 Aulas)</button>
+            </div>
+
+            <div class="syllabus-content active" id="qgis">
+                <div class="accordion">
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">01 | Interface e Vetorização Básica</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">02 | Importação e Manipulação de Dados</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">03 | Ferramentas de Geoprocessamento</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">04 | Desvendando as Simbologias</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">05 | DLabels (Rótulos) e Etiquetas</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">06 | Modelos Digitais de Elevação</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">07 | Análises Espaciais e Estatísticas</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">08 | Gráficos e Labelling Avançado</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">09 | Ferramentas de Hidrologia</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">10 | Sensoriamento Remoto: A Base</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">11 | Processamento de Imagens</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">12 | Classificação e Mapas de Uso do Solo</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="mod-title">13 | Módulo PAP.IA | Exercícios com Inteligência Artificial</span>
+                            <span class="mod-icon">⌵</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-inner">
+                                <p>Conteúdo detalhado deste módulo disponível na plataforma principal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="syllabus-content hidden" id="arcgis-pro">
+                <p class="placeholder-text">Conteúdo do ArcGIS Pro (Acesso vitalício)</p>
+            </div>
+            <div class="syllabus-content hidden" id="arcmap">
+                <p class="placeholder-text">Conteúdo do ArcMap (Desktop)</p>
+            </div>
+            <div class="syllabus-content hidden" id="especialistas">
+                <p class="placeholder-text">Acesso aos Cursos de Especialistas Convidados</p>
+            </div>
+            <div class="syllabus-content hidden" id="ia">
+                <p class="placeholder-text">Módulo exclusivo de Inteligência Artificial aplicada</p>
+            </div>
+            <div class="syllabus-content hidden" id="lives">
+                <p class="placeholder-text">Gravação de mais de 107 aulas exclusivas</p>
+            </div>
+        </section>
+
 
         <!-- FOOTER -->
         <footer class="main-footer">

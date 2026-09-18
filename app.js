@@ -750,3 +750,143 @@ window.liberarPremio = function(index) {
     
     alert(`Sucesso!\nA indicação de ${ref.name} foi validada.\n200 pontos foram transferidos para o saldo de ${userState.name}.`);
 };
+
+
+
+// ==========================================================================
+// 7. NOVA LÓGICA DA PÁGINA DE CONVIDADO (OFERTA -> FORM -> CHECKOUT)
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Transição Oferta -> Formulário
+    const btnShowForm = document.getElementById('btn-show-form');
+    const offerState = document.getElementById('offer-state');
+    const formState = document.getElementById('form-state');
+    const leadForm = document.getElementById('ref-lead-form');
+    const btnCheckoutFinal = document.getElementById('btn-checkout-final');
+    
+    if (btnShowForm && offerState && formState) {
+        btnShowForm.addEventListener('click', () => {
+            offerState.classList.add('hidden');
+            setTimeout(() => {
+                formState.classList.remove('hidden');
+            }, 400); // aguarda a opacidade terminar
+        });
+    }
+
+    // 2. Transição Formulário -> Checkout (Submissão)
+    if (leadForm) {
+        // Remove old listener if any (since we are appending, we need to redefine or intercept)
+        // Actually, the old listener was attached to submit. Let's just override it safely or let it run.
+        // The easiest way is to clone and replace the form to remove old listeners.
+        const newLeadForm = leadForm.cloneNode(true);
+        leadForm.parentNode.replaceChild(newLeadForm, leadForm);
+
+        newLeadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submit-lead-btn');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Validando...";
+            }
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const refUser = urlParams.get('ref') || 'Indicação Anônima';
+
+            // Dados do form
+            const name = document.getElementById("lead-name").value;
+            const email = document.getElementById("lead-email").value;
+            const relacao = document.getElementById("lead-relation").value;
+            const atuacao = document.getElementById("lead-occupation").value;
+            const hobby = document.getElementById("lead-hobby").value;
+
+            try {
+                const formData = new URLSearchParams();
+                formData.append("indicador", refUser);
+                formData.append("convidado", name);
+                formData.append("email", email);
+                formData.append("relacao", relacao);
+                formData.append("atuacao", atuacao);
+                formData.append("hobby", hobby);
+
+                await fetch(WEB_APP_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+            } catch (err) {
+                console.error("Erro no envio:", err);
+            }
+
+            // Oculta Form, volta para Oferta, mas com Botão de Checkout ativado
+            const formStateEl = document.getElementById('form-state');
+            const offerStateEl = document.getElementById('offer-state');
+            const btnShowFormEl = document.getElementById('btn-show-form');
+            const btnCheckoutFinalEl = document.getElementById('btn-checkout-final');
+
+            formStateEl.classList.add('hidden');
+            setTimeout(() => {
+                offerStateEl.classList.remove('hidden');
+                btnShowFormEl.classList.add('hidden');
+                btnCheckoutFinalEl.classList.remove('hidden');
+                // Adiciona o ref URL
+                btnCheckoutFinalEl.href = `https://voomp.com.br/checkout?ref=${encodeURIComponent(refUser)}`;
+            }, 400);
+        });
+    }
+
+    // 3. Ementa - Tabs
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.syllabus-content');
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.add('hidden'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            
+            btn.classList.add('active');
+            const targetId = btn.getAttribute('data-target');
+            const targetContent = document.getElementById(targetId);
+            if(targetContent) {
+                targetContent.classList.remove('hidden');
+                // Timeout to allow display block before opacity transition
+                setTimeout(() => targetContent.classList.add('active'), 10);
+            }
+        });
+    });
+
+    // 4. Ementa - Accordion
+    const accordions = document.querySelectorAll('.accordion-item');
+    accordions.forEach(acc => {
+        const header = acc.querySelector('.accordion-header');
+        const body = acc.querySelector('.accordion-body');
+        
+        header.addEventListener('click', () => {
+            const isOpen = acc.classList.contains('open');
+            
+            // Close all
+            accordions.forEach(a => {
+                a.classList.remove('open');
+                a.querySelector('.accordion-body').style.maxHeight = null;
+            });
+
+            if (!isOpen) {
+                acc.classList.add('open');
+                body.style.maxHeight = body.scrollHeight + "px";
+            }
+        });
+    });
+
+    // 5. Smooth Scroll
+    document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
