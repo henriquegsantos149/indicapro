@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
     
     <!-- CSS Unificado -->
-    <link rel="stylesheet" href="style.css?v=1789768845812">
+    <link rel="stylesheet" href="style.css?v=1790023556111">
 </head>
 <body class="dark-theme guest-view">
 
@@ -82,28 +82,30 @@
             <section class="guest-form-column">
                 <div class="interactive-flow-container" id="interactive-flow">
                     <!-- ESTADO 1 E 3: Oferta Exclusiva -->
-                    <div id="offer-state" class="offer-card-premium active" style="padding: 32px 24px;">
+                    <div id="offer-state" class="offer-card-premium active">
                         <div class="offer-badge">OFERTA ESPECIAL DE INDICAÇÃO</div>
                         <img src="images/logo-pap-branco.png" alt="Programa PAP" class="offer-pap-logo">
                         <div class="offer-header">
                             <p class="offer-subtitle">ASSINATURA ANUAL EM ATÉ</p>
                         </div>
                         <div class="offer-body">
-                            <p class="price-strikethrough"><span class="strikethrough-value">De R$ 1.497,00</span> por apenas:</p>
+                            <p class="price-strikethrough">De R$ 1.497,00</p>
+                            <p class="price-highlight">POR APENAS:</p>
                             <h2 class="price-main">12x de <span>R$ 99,70</span></h2>
-                            <p class="price-sub">ou R$ 997,00 à vista</p>
+                            <p class="price-sub">ou R$ 997,00 à vista (Condição exclusiva por indicação)</p>
                         </div>
                         <div class="offer-action">
-                            <button type="button" id="btn-show-form" class="btn-neon-green btn-full">CONFIRMAR INDICAÇÃO E LIBERAR DESCONTO</button>
-                            <a id="btn-checkout-final" href="https://plataforma.ambientalpro.com.br/checkout-pap-voomp-play-desconto" target="_blank" class="btn-neon-green btn-full hidden" style="display:flex; justify-content:center; align-items:center;">GARANTIR MINHA MATRÍCULA</a>
+                            <button type="button" id="btn-show-form" class="btn-neon-action">CONFIRMAR INDICAÇÃO E LIBERAR DESCONTO</button>
+                            <a id="btn-checkout-final" href="https://plataforma.ambientalpro.com.br/checkout-pap-voomp-play-desconto" target="_blank" class="btn-neon-action hidden">GARANTIR MINHA MATRÍCULA</a>
                         </div>
-                        <div class="offer-footer" style="margin-top: 16px;">
+                        <div class="offer-footer">
                             <span class="safe-icon">🔒</span> Compra 100% Segura • Assinatura Anual • Garantia 15 dias
                         </div>
                     </div>
 
                     <!-- ESTADO 2: Formulário (Invisível no início) -->
                     <div id="form-state" class="guest-form-card hidden">
+                          <button type="button" id="btn-back-offer" class="btn-back-link">← Voltar para os detalhes da oferta</button>
                         <div class="form-header">
                             <h3 style="font-size: 20px;">Garanta sua vaga com desconto</h3>
                             <p>Preencha os campos para validar sua indicação.</p>

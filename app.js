@@ -890,3 +890,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnBackOffer = document.getElementById('btn-back-offer');
+    if (btnBackOffer) {
+        btnBackOffer.addEventListener('click', () => {
+            const formState = document.getElementById('form-state');
+            const offerState = document.getElementById('offer-state');
+            
+            formState.classList.remove('active');
+            formState.classList.add('hidden');
+            
+            offerState.classList.remove('hidden');
+            offerState.classList.add('active');
+        });
+    }
+});
