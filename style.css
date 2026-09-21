@@ -9,7 +9,7 @@
     --bg-surface: #0b0d19;           /* Fundo secundário / cards real */
     --bg-surface-accent: #121626;    /* Superfícies secundárias leves */
     
-    --color-green-tech: #6FB03A;     /* Verde folha oficial */
+    --color-green-tech: #74C043;     /* Verde folha oficial */
     --color-green-glow: rgba(111, 176, 58, 0.15);
     --color-green-btn: #31A8A8;      /* Azul/Teal oficial para botões do indicado */
     
@@ -447,11 +447,11 @@ body {
 }
 
 .reward-card.unlocked {
-    border-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(116, 192, 67, 0.2);
 }
 .reward-card.unlocked:hover {
     border-color: var(--color-green-tech);
-    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.05);
+    box-shadow: 0 4px 20px rgba(116, 192, 67, 0.05);
 }
 
 /* Status Overlay do Card */
@@ -567,8 +567,8 @@ body {
 
 .badge-financeiro {
     color: var(--color-green-tech);
-    border-color: rgba(16, 185, 129, 0.2);
-    background: rgba(16, 185, 129, 0.05);
+    border-color: rgba(116, 192, 67, 0.2);
+    background: rgba(116, 192, 67, 0.05);
 }
 
 /* Barra de Progresso Interna (Alura) */
@@ -732,7 +732,7 @@ body {
 
 .badge-status-ponto.val-ativo {
     color: var(--color-green-tech);
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(116, 192, 67, 0.05);
 }
 
 .badge-status-ponto.val-pendente {
@@ -1492,8 +1492,8 @@ body {
     transition: color 0.2s ease;
 }
 .footer-link-neon:hover {
-    color: #10B981;
-    text-shadow: 0 0 8px rgba(16,185,129,0.4);
+    color: #74C043;
+    text-shadow: 0 0 8px rgba(116, 192, 67,0.4);
 }
 
 
@@ -1515,7 +1515,7 @@ body {
     border-radius: 20px;
     padding: 32px 24px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 20px rgba(116, 192, 67, 0.2);
     transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
     display: flex;
     flex-direction: column;
@@ -1545,7 +1545,7 @@ body {
     border-radius: 20px;
     align-self: center;
     letter-spacing: 1px;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 12px rgba(116, 192, 67, 0.3);
 }
 
 .offer-header h4 {
@@ -1564,10 +1564,11 @@ body {
 }
 
 .price-main {
-    font-size: 38px;
-    font-weight: 900;
-    margin: 0 0 4px 0;
-    color: var(--text-light);
+    font-size: 36px !important;
+    font-weight: 900 !important;
+    color: #FFFFFF !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
 }
 
 .price-sub {
@@ -1627,8 +1628,8 @@ body {
 }
 
 .btn-secondary-neon:hover {
-    background: rgba(16, 185, 129, 0.1);
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+    background: rgba(116, 192, 67, 0.1);
+    box-shadow: 0 0 15px rgba(116, 192, 67, 0.3);
 }
 
 /* ==========================================================================
@@ -1810,7 +1811,7 @@ body {
 }
 
 .tab-btn.active {
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(116, 192, 67, 0.1);
     border-color: var(--neon-green);
     color: var(--neon-green);
 }
@@ -1890,7 +1891,11 @@ body {
 }
 
 .offer-subtitle { color: var(--neon-green); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 4px; }
-.offer-pap-logo { width: 110px; margin: 16px auto 0; display: block; }
+.offer-pap-logo {
+    width: 170px !important;
+    margin: 0 auto 24px auto !important;
+    display: block;
+}
 .offer-badge { color: #000 !important; font-weight: 900 !important; }
 .btn-neon-green { border-radius: 12px !important; color: #000 !important; font-weight: 900 !important; }
 .mec-seal-img { width: 150px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
@@ -1898,7 +1903,7 @@ body {
 
 /* DOBLA 1: Ajustes Hero */
 .link-neon-scroll {
-    color: var(--neon-green) !important;
+    color: #74C043 !important;
     text-decoration: underline !important;
     font-weight: 700 !important;
     font-size: 15px !important;
@@ -1911,7 +1916,7 @@ body {
 }
 .link-neon-scroll:hover {
     color: #0ea5e9 !important; /* slight change on hover if needed, or keep green */
-    text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    text-shadow: 0 0 10px rgba(116, 192, 67, 0.4);
     background: transparent !important;
 }
 
@@ -1920,7 +1925,7 @@ body {
     padding: 32px 24px !important; 
     border-radius: 20px !important;
     border: 2px solid var(--neon-green) !important;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2) !important;
+    box-shadow: 0 0 20px rgba(116, 192, 67, 0.2) !important;
     background: #0b0d19 !important;
 }
 .offer-badge {
@@ -1941,7 +1946,7 @@ body {
     display: block;
 }
 .offer-subtitle {
-    color: var(--neon-green) !important;
+    color: #74C043 !important;
     font-weight: 900 !important;
     font-size: 14px !important;
     text-transform: uppercase !important;
@@ -1994,7 +1999,7 @@ body {
     color: #334155 !important;
 }
 .check-icon {
-    color: var(--neon-green) !important;
+    color: #74C043 !important;
     font-weight: 900 !important;
 }
 .mec-seal-img {
@@ -2015,7 +2020,7 @@ body {
 .tab-btn.active {
     background: var(--neon-green) !important;
     color: #000000 !important;
-    border-color: var(--neon-green) !important;
+    border-color: #74C043 !important;
 }
 .accordion-header {
     background: transparent !important;
@@ -2121,14 +2126,14 @@ body {
 
 .offer-badge {
     background: transparent !important;
-    color: var(--neon-green) !important;
+    color: #74C043 !important;
     border: 1px solid var(--neon-green) !important;
     font-size: 11px !important;
     padding: 6px 16px !important;
 }
 
 .btn-neon-green {
-    background: linear-gradient(90deg, #10B981, #00E676) !important;
+    background: #74C043 !important;
     color: #FFFFFF !important;
     font-weight: bold !important;
     border-radius: 16px 0px 16px 0px !important;
@@ -2164,7 +2169,7 @@ body {
     border: 1px solid var(--neon-green) !important;
 }
 .accordion-item.open .mod-title-text {
-    color: var(--neon-green) !important;
+    color: #74C043 !important;
 }
 .accordion-header {
     display: flex;
@@ -2193,16 +2198,16 @@ body {
 
 /* Tab Ativa */
 .tab-btn.active {
-    background-color: #10B981 !important;
+    background-color: #74C043 !important;
     color: #000000 !important;
     font-weight: bold !important;
-    border-color: #10B981 !important;
+    border-color: #74C043 !important;
 }
 
 
 /* NOVO PADRÃO: PRIMEIRA DOBRA */
 .offer-card-premium {
-    border: 1px solid #10B981 !important;
+    border: 1px solid #74C043 !important;
     border-radius: 16px !important;
     padding: 32px 24px !important;
     background: #0b0d19 !important;
@@ -2214,9 +2219,9 @@ body {
 }
 
 .offer-badge {
-    background: rgba(16, 185, 129, 0.15) !important;
-    border: 1px solid rgba(16, 185, 129, 0.3) !important;
-    color: #10B981 !important;
+    background: rgba(116, 192, 67, 0.15) !important;
+    border: 1px solid rgba(116, 192, 67, 0.3) !important;
+    color: #74C043 !important;
     font-size: 11px !important;
     font-weight: 800 !important;
     text-transform: uppercase !important;
@@ -2236,7 +2241,7 @@ body {
 }
 
 .price-highlight {
-    color: #10B981 !important;
+    color: #74C043 !important;
     font-size: 13px !important;
     font-weight: 800 !important;
     text-transform: uppercase !important;
@@ -2263,7 +2268,7 @@ body {
 
 /* Botoes Padronizados (Ação 1 e 2) */
 .btn-neon-action {
-    background: linear-gradient(135deg, #10B981, #00E676) !important;
+    background: #74C043 !important;
     color: #000000 !important;
     font-weight: 800 !important;
     font-size: 15px !important;
@@ -2276,7 +2281,7 @@ body {
     align-items: center !important;
     border: none !important;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 4px 14px rgba(116, 192, 67, 0.2);
     text-decoration: none;
 }
 
@@ -2300,7 +2305,7 @@ body {
     font-weight: 600;
 }
 .btn-back-link:hover {
-    color: #10B981;
+    color: #74C043;
 }
 
 /* Transições de Estado */
