@@ -2455,3 +2455,96 @@ body {
     visibility: visible !important;
     pointer-events: auto !important;
 }
+
+
+/* =========================================================
+   MEC SECTION (DOBRA 2) EXACT SPECS
+   ========================================================= */
+.mec-banner-section {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    background-color: #FFFFFF !important;
+    padding: 80px 20px !important;
+    border: none !important;
+}
+
+.mec-container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 48px !important;
+}
+
+.mec-seal-img {
+    height: 150px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    filter: none !important;
+}
+
+.mec-content {
+    text-align: left !important;
+    flex-grow: 1;
+}
+
+.mec-content h2 {
+    color: #0F172A !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 16px !important;
+}
+
+.mec-content p {
+    color: #475569 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+}
+
+.mec-checklist-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+}
+
+.mec-check-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.mec-check-item .check-icon {
+    color: #74C043 !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+}
+
+.mec-check-item .mec-check-text {
+    color: #1E293B !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+}
+
+@media (max-width: 768px) {
+    .mec-container {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 32px !important;
+    }
+    .mec-content {
+        text-align: center !important;
+    }
+    .mec-checklist-grid {
+        grid-template-columns: 1fr !important;
+        text-align: left !important;
+    }
+}
