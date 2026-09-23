@@ -1898,7 +1898,22 @@ body {
 }
 .offer-badge { color: #000 !important; font-weight: 900 !important; }
 .btn-neon-green { border-radius: 12px !important; color: #000 !important; font-weight: 900 !important; }
-.mec-seal-img { width: 150px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
+.mec-seal-img {
+    height: 160px !important;
+    width: auto !important;
+    min-width: 140px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15)) !important;
+}
+
+.mec-container {
+    overflow: visible !important;
+}
 
 
 /* DOBLA 1: Ajustes Hero */
@@ -2547,4 +2562,23 @@ body {
         grid-template-columns: 1fr !important;
         text-align: left !important;
     }
+}
+
+
+/* ULTIMATE OVERRIDE FOR MEC LOGO */
+.mec-seal-img {
+    height: 160px !important;
+    width: auto !important;
+    min-width: 140px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15)) !important;
+    overflow: visible !important;
+}
+.mec-container {
+    overflow: visible !important;
 }
