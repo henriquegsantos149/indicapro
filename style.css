@@ -2672,3 +2672,189 @@ body {
         margin: 0 auto;
     }
 }
+
+
+/* =========================================================
+   SYLLABUS (EMENTA) - EXACT OFFICIAL GUIDELINES
+   ========================================================= */
+
+/* 1. TÍTULO E BOTÕES DE ABAS */
+.text-green {
+    color: #74C043 !important;
+}
+
+.tab-btn.active {
+    background-color: #74C043 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    border-color: #74C043 !important;
+}
+
+.tab-btn.active .icon {
+    /* Mudar a cor do ícone SVG/Emoji na aba se possível */
+    color: #000000 !important;
+}
+
+/* 2. ESTADO FECHADO (ACCORDIONS INATIVOS) */
+.accordion-item {
+    background: #0A0D14 !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Flex layout para o header do accordion */
+.accordion-header {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 20px !important;
+    background: transparent !important;
+    width: 100% !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-align: left !important;
+}
+
+.mod-number {
+    width: 42px !important;
+    height: 42px !important;
+    background: #111625 !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+    flex-shrink: 0 !important;
+    margin-right: 16px !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease !important;
+}
+
+.mod-title-text {
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+    transition: color 0.3s ease !important;
+    flex-grow: 1 !important;
+}
+
+/* 3. ESTADO EXPANDIDO (ACCORDION ATIVO) */
+.accordion-item.open {
+    border: 1px solid #74C043 !important;
+}
+
+.accordion-item.open .mod-number {
+    background: #74C043 !important;
+    color: #000000 !important;
+}
+
+.accordion-item.open .mod-title-text {
+    color: #74C043 !important;
+}
+
+/* 4. ESTRUTURA E CORES DO CONTEÚDO INTERNO */
+.accordion-inner {
+    padding: 0 20px 24px 78px !important; /* padding-left compensando a badge para alinhar o texto com o título */
+    background: #0A0D14 !important;
+}
+
+@media (max-width: 768px) {
+    .accordion-inner {
+        padding: 0 20px 24px 20px !important;
+    }
+}
+
+.acc-section-title, .acc-topics-title {
+    color: #74C043 !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.acc-topics-title {
+    margin-top: 24px !important;
+}
+
+.acc-text {
+    color: #94A3B8 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Grid de Tópicos */
+.acc-topics-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px 24px !important;
+}
+
+@media (max-width: 768px) {
+    .acc-topics-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.acc-topic-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+}
+
+.acc-topic-item span:not(.check) {
+    color: #94A3B8 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.acc-topic-item .check {
+    color: #74C043 !important;
+    font-weight: bold !important;
+    flex-shrink: 0 !important;
+}
+
+/* BOX DE AULA BÔNUS DE IA */
+.acc-bonus-box {
+    background: #0f131f !important; /* levemente mais claro que o fundo do card */
+    border: 1px solid #1E293B !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    margin-top: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+}
+
+.acc-bonus-icon {
+    color: #74C043 !important;
+    font-size: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.acc-bonus-content h5 {
+    color: #74C043 !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    margin-bottom: 4px !important;
+}
+
+.acc-bonus-content p {
+    color: #FFFFFF !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+}
+
+
+.acc-section-title::before {
+    content: "• ";
+}
