@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
     
     <!-- CSS Unificado -->
-    <link rel="stylesheet" href="style.css?v=1790026223262">
+    <link rel="stylesheet" href="style.css?v=1790194661149">
 </head>
 <body class="dark-theme guest-view">
 
@@ -82,7 +82,7 @@
             <section class="guest-form-column">
                 <div class="interactive-flow-container" id="interactive-flow">
                     <!-- ESTADO 1 E 3: Oferta Exclusiva -->
-                    <div id="offer-state" class="offer-card-premium active">
+                    <div id="offer-state" class="offer-card-premium">
                         <div class="offer-badge">OFERTA ESPECIAL DE INDICAÇÃO</div>
                         <img src="images/logo-pap-branco.png" alt="Programa PAP" class="offer-pap-logo">
                         
@@ -102,61 +102,7 @@
                     </div>
 
                     <!-- ESTADO 2: Formulário (Invisível no início) -->
-                    <div id="form-state" class="guest-form-card hidden">
-                          <button type="button" id="btn-back-offer" class="btn-back-link">← Voltar para os detalhes da oferta</button>
-                        <div class="form-header">
-                            <h3 style="font-size: 20px;">Garanta sua vaga com desconto</h3>
-                            <p>Preencha os campos para validar sua indicação.</p>
-                        </div>
-                        <form id="ref-lead-form" class="ref-lead-form">
-                            <div class="form-row">
-                                <div class="form-group-custom">
-                                    <label for="lead-name">Nome Completo</label>
-                                    <input type="text" id="lead-name" placeholder="Digite seu nome" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group-custom">
-                                    <label for="lead-email">E-mail</label>
-                                    <input type="email" id="lead-email" placeholder="nome@exemplo.com" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group-custom">
-                                    <label for="lead-relation">Qual sua relação com o indicador?</label>
-                                    <select id="lead-relation" required>
-                                        <option value="" disabled selected>Selecione uma opção</option>
-                                        <option value="Amigo">Amigo</option>
-                                        <option value="Colega de trabalho">Colega de trabalho</option>
-                                        <option value="Parente">Parente</option>
-                                        <option value="Rede social">Rede social</option>
-                                        <option value="Outro">Outro</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group-custom">
-                                    <label for="lead-occupation">Atuação profissional</label>
-                                    <select id="lead-occupation" required>
-                                        <option value="" disabled selected>Selecione uma opção</option>
-                                        <option value="Estudante">Estudante</option>
-                                        <option value="Autônomo/Consultor (PJ)">Autônomo/Consultor (PJ)</option>
-                                        <option value="Estagiário">Estagiário</option>
-                                        <option value="Profissional Contratado">Profissional Contratado</option>
-                                        <option value="Líder / Gestor">Líder / Gestor</option>
-                                        <option value="Pesquisador">Pesquisador</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group-custom">
-                                    <label for="lead-hobby">Seu principal interesse na área?</label>
-                                    <input type="text" id="lead-hobby" placeholder="Ex: Criação de mapas, WebGIS, etc." required>
-                                </div>
-                            </div>
-                            <button type="submit" id="submit-lead-btn" class="btn-neon-action" style="margin-top: 16px;">GARANTIR MINHA MATRÍCULA</button>
-                        </form>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -977,5 +923,66 @@
 
     <!-- JS Control -->
     <script src="app.js"></script>
+
+<!-- MODAL BACKDROP -->
+<div id="modal-backdrop" class="modal-backdrop hidden">
+<div id="form-state" class="guest-form-card modal-content">
+    <button type="button" id="close-modal-btn" class="close-modal">&times;</button>
+                          
+                        <div class="form-header">
+                            <h3 style="font-size: 20px;">Garanta sua vaga com desconto</h3>
+                            <p>Preencha os campos abaixo para validar sua indicação e liberar o checkout.</p>
+                        </div>
+                        <form id="ref-lead-form" class="ref-lead-form">
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-name">Nome Completo</label>
+                                    <input type="text" id="lead-name" placeholder="Digite seu nome" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-email">E-mail</label>
+                                    <input type="email" id="lead-email" placeholder="nome@exemplo.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-relation">Qual sua relação com o indicador?</label>
+                                    <select id="lead-relation" required>
+                                        <option value="" disabled selected>Selecione uma opção</option>
+                                        <option value="Amigo">Amigo</option>
+                                        <option value="Colega de trabalho">Colega de trabalho</option>
+                                        <option value="Parente">Parente</option>
+                                        <option value="Rede social">Rede social</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-occupation">Atuação profissional</label>
+                                    <select id="lead-occupation" required>
+                                        <option value="" disabled selected>Selecione uma opção</option>
+                                        <option value="Estudante">Estudante</option>
+                                        <option value="Autônomo/Consultor (PJ)">Autônomo/Consultor (PJ)</option>
+                                        <option value="Estagiário">Estagiário</option>
+                                        <option value="Profissional Contratado">Profissional Contratado</option>
+                                        <option value="Líder / Gestor">Líder / Gestor</option>
+                                        <option value="Pesquisador">Pesquisador</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group-custom">
+                                    <label for="lead-hobby">Seu principal interesse na área?</label>
+                                    <input type="text" id="lead-hobby" placeholder="Ex: Criação de mapas, WebGIS, etc." required>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit-lead-btn" class="btn-neon-action" style="margin-top: 16px;">GARANTIR MINHA MATRÍCULA</button>
+                        </form>
+                    </div>
+</div>
+
 </body>
 </html>

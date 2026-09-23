@@ -907,3 +907,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Override logic for btn-show-form
+    let btnShowFormEl = document.getElementById('btn-show-form');
+    if (btnShowFormEl) {
+        // Clone to remove old listeners
+        const newBtn = btnShowFormEl.cloneNode(true);
+        btnShowFormEl.parentNode.replaceChild(newBtn, btnShowFormEl);
+        btnShowFormEl = newBtn;
+        
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        
+        btnShowFormEl.addEventListener('click', () => {
+            if (modalBackdrop) {
+                modalBackdrop.classList.remove('hidden');
+            }
+        });
+        
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', () => {
+                modalBackdrop.classList.add('hidden');
+            });
+        }
+        
+        // Optional: click outside to close
+        if (modalBackdrop) {
+            modalBackdrop.addEventListener('click', (e) => {
+                if (e.target === modalBackdrop) {
+                    modalBackdrop.classList.add('hidden');
+                }
+            });
+        }
+    }
+    
+    // Make sure form submission hides modal and shows checkout button
+    const leadFormEl = document.getElementById('ref-lead-form');
+    if (leadFormEl) {
+        // We will intercept submit
+        leadFormEl.addEventListener('submit', (e) => {
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            if (modalBackdrop) {
+                modalBackdrop.classList.add('hidden'); // Close modal
+            }
+            // The original logic handles Voomp webhook and shows the btn-checkout-final
+            // We just ensure btnShowForm is hidden and btnCheckoutFinal is shown.
+            const btnS = document.getElementById('btn-show-form');
+            const btnC = document.getElementById('btn-checkout-final');
+            if (btnS) btnS.classList.add('hidden');
+            if (btnC) btnC.classList.remove('hidden');
+        });
+    }
+});
