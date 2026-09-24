@@ -2858,3 +2858,73 @@ body {
 .acc-section-title::before {
     content: "• ";
 }
+
+
+/* TAB BUTTONS DESIGN UPDATE */
+.syllabus-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.tab-btn {
+    padding: 8px 18px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    background: #111625 !important;
+    border: 1px solid #1E293B !important;
+    color: #94A3B8 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+}
+
+.tab-btn:hover {
+    color: #74C043 !important;
+    border-color: #74C043 !important;
+}
+
+.tab-btn.active {
+    background-color: #74C043 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    border-color: #74C043 !important;
+    box-shadow: 0 0 12px rgba(116, 192, 67, 0.4) !important;
+}
+
+.tab-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+}
+
+/* BADGE UPDATE */
+.mod-number {
+    border-radius: 12px 0px 12px 0px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: #111625 !important;
+    border: 1px solid #1E293B !important;
+    color: #FFFFFF !important;
+}
+
+.accordion-item.open .mod-number {
+    background: #74C043 !important;
+    border-color: #74C043 !important;
+    color: #000000 !important;
+}
+
+/* INTERNAL TEXT COLORS */
+.acc-text, .acc-topic-item span:not(.check) {
+    color: #FFFFFF !important;
+}
+
+/* Make sure bonus text is pure white as requested */
+.acc-bonus-content p {
+    color: #FFFFFF !important;
+}
