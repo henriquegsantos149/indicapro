@@ -3152,3 +3152,36 @@ body {
     color: #74C043 !important;
     margin-top: 2px !important;
 }
+
+
+/* ---------------------------------
+   AJUSTES FINAIS HERO (TEXTO, ALINHAMENTO E LOGO)
+--------------------------------- */
+html {
+    scroll-behavior: smooth !important;
+}
+
+.guest-split-grid {
+    align-items: flex-start !important; /* Force top alignment between left and right columns */
+    align-content: center !important;
+}
+
+.offer-pap-logo {
+    height: 60px !important;
+    max-height: 60px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    margin-bottom: 8px !important;
+}
+
+/* Ensure the wrapper actually centers the grid if it's smaller than flex-grow */
+.hero-fold-wrapper {
+    justify-content: center !important; /* changed from space-between to center */
+    gap: 20px;
+}
+.referral-welcome-banner {
+    margin-top: 0 !important;
+}
+.hero-scroll-wrapper {
+    margin-bottom: 0 !important;
+}
