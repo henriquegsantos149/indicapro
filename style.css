@@ -1786,7 +1786,7 @@ body {
 
 .syllabus-tabs {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; justify-content: flex-start;
     gap: 12px;
     justify-content: center;
     margin-bottom: 40px;
@@ -2863,7 +2863,7 @@ body {
 /* TAB BUTTONS DESIGN UPDATE */
 .syllabus-tabs {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; justify-content: flex-start;
     justify-content: center;
     gap: 12px;
     margin-bottom: 32px;
@@ -2927,4 +2927,35 @@ body {
 /* Make sure bonus text is pure white as requested */
 .acc-bonus-content p {
     color: #FFFFFF !important;
+}
+
+
+/* TABS SCROLL OVERRIDE */
+.syllabus-tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    padding-bottom: 8px !important;
+}
+
+/* Esconder barra de rolagem mas permitir scroll */
+.syllabus-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+.syllabus-tabs::-webkit-scrollbar-track {
+    background: transparent;
+}
+.syllabus-tabs::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 4px;
+}
+
+.tab-btn {
+    padding: 6px 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
 }
