@@ -3053,3 +3053,102 @@ body {
 .guest-offer-card {
     padding: 20px 24px !important;
 }
+
+
+/* ---------------------------------
+   COMPACTAÇÃO EXTREMA HERO 100VH 0 SCROLL
+--------------------------------- */
+.hero-fold-wrapper {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    padding: 12px 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+}
+
+/* Barra de Indicação */
+.referral-welcome-banner {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+}
+
+/* Coluna Esquerda */
+.guest-title {
+    font-size: 28px !important;
+    margin-bottom: 8px !important;
+    line-height: 1.1 !important;
+}
+.guest-text {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 12px !important;
+}
+.guest-features-list {
+    gap: 6px !important;
+}
+.feature-item {
+    margin-bottom: 0 !important;
+}
+.feature-details h4 {
+    font-size: 14px !important;
+    margin-bottom: 2px !important;
+}
+.feature-details p {
+    font-size: 12px !important;
+    margin: 0 !important;
+}
+
+/* Card de Oferta */
+.guest-offer-card, .offer-card-premium {
+    padding: 16px 20px !important;
+}
+.offer-pap-logo {
+    height: 45px !important;
+    max-height: 45px !important;
+    margin-bottom: 8px !important;
+    width: auto !important;
+}
+.price-main {
+    font-size: 26px !important;
+    margin: 4px 0 !important;
+}
+#btn-show-form, .btn-neon-glow {
+    height: 44px !important;
+    font-size: 13px !important;
+}
+.safe-checkout, .offer-footer-text, .security-badges {
+    font-size: 11px !important;
+    margin-top: 6px !important;
+}
+
+/* Botão "CONHEÇA MAIS" */
+.hero-scroll-wrapper {
+    margin-top: 8px !important;
+    margin-bottom: 4px !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-bottom: 0 !important;
+}
+.btn-scroll-down {
+    padding: 6px 16px !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    background: #74C043 !important;
+    color: #000 !important;
+    border-radius: 20px !important;
+    margin-bottom: 2px !important;
+}
+.scroll-arrow {
+    width: 14px !important;
+    height: 14px !important;
+    color: #74C043 !important;
+    margin-top: 2px !important;
+}
