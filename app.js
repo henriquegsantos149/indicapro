@@ -802,6 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const formData = new URLSearchParams();
                 formData.append("indicador", refUser);
+                formData.append("emailIndicador", refEmail); // AGORA PASSA O EMAIL!
                 formData.append("convidado", name);
                 formData.append("email", email);
                 formData.append("relacao", relacao);
