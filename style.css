@@ -3185,3 +3185,16 @@ html {
 .hero-scroll-wrapper {
     margin-bottom: 0 !important;
 }
+
+
+/* ---------------------------------
+   AJUSTES DE LARGURA E MARGENS (PEDIDO DA LETICIA)
+--------------------------------- */
+.guest-view .app-container {
+    max-width: 1350px !important;
+}
+
+.guest-view .referral-welcome-banner {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
