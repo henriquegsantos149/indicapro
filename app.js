@@ -786,11 +786,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = document.getElementById('submit-lead-btn');
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.textContent = "Validando...";
+                submitBtn.textContent = "Redirecionando...";
             }
 
             const urlParams = new URLSearchParams(window.location.search);
             const refUser = urlParams.get('ref') || 'Indicação Anônima';
+            let decodedEmail = "";
+            try {
+                if (urlParams.get("em")) decodedEmail = atob(urlParams.get("em"));
+            } catch(e) {}
 
             // Dados do form
             const name = document.getElementById("lead-name").value;
@@ -802,7 +806,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const formData = new URLSearchParams();
                 formData.append("indicador", refUser);
-                formData.append("emailIndicador", refEmail); // AGORA PASSA O EMAIL!
+                formData.append("emailIndicador", decodedEmail);
                 formData.append("convidado", name);
                 formData.append("email", email);
                 formData.append("relacao", relacao);
@@ -818,19 +822,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Erro no envio:", err);
             }
 
-            // Oculta Form, volta para Oferta, mas com Botão de Checkout ativado
-            const formStateEl = document.getElementById('form-state');
-            const offerStateEl = document.getElementById('offer-state');
-            const btnShowFormEl = document.getElementById('btn-show-form');
-            const btnCheckoutFinalEl = document.getElementById('btn-checkout-final');
-
-            formStateEl.classList.add('hidden');
+            // Redirecionamento direto para o checkout com a tag de indicação (ref)
             setTimeout(() => {
-                offerStateEl.classList.remove('hidden');
-                btnShowFormEl.classList.add('hidden');
-                btnCheckoutFinalEl.classList.remove('hidden');
-                // Adiciona o ref URL
-                btnCheckoutFinalEl.href = `https://voomp.com.br/checkout?ref=${encodeURIComponent(refUser)}`;
+                window.location.href = `https://pay.voompcreators.com.br/428?ref=${encodeURIComponent(refUser)}`;
             }, 400);
         });
     }
