@@ -3767,3 +3767,37 @@ html {
     margin-top: 6px !important;
     animation: bounce 2s infinite !important;
 }
+
+
+/* =========================================================
+   AJUSTE CIRÚRGICO DE ALINHAMENTO E LOGO (PEDIDO 6)
+========================================================= */
+
+/* 1. Alinhamento Topo-a-Topo Rigoroso */
+.guest-split-grid {
+    align-items: flex-start !important;
+}
+.guest-info-column {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.interactive-flow-container, #form-state {
+    margin-top: 0 !important;
+}
+.guest-title {
+    /* A altura da linha (line-height) cria um espaço natural em branco acima da letra. 
+       -9px elimina exatamente esse espaço invisível, cravando a letra 'A' na mesma reta da borda do card */
+    margin-top: -9px !important; 
+}
+
+/* 2. Ampliação da Presença Visual da Logo PAP */
+.offer-pap-logo {
+    height: 90px !important; /* Altura significativamente maior */
+    max-height: none !important; /* Remove qualquer limitação */
+    width: auto !important;
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
