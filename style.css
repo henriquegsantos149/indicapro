@@ -3409,3 +3409,111 @@ html {
         margin-top: 8px !important;
     }
 }
+
+
+/* =========================================================
+   ALINHAMENTO ABSOLUTO E ESCALA RESPONSIVA PERFEITA
+========================================================= */
+
+/* 1. TOPO: Barra de Indicação */
+.guest-view .referral-welcome-banner {
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    padding: clamp(10px, 1.5vh, 16px) clamp(16px, 2vw, 24px) !important;
+    font-size: clamp(13px, 1.2vw, 16px) !important;
+}
+
+/* 2. CENTRO: Grid de 2 Colunas */
+.hero-fold-wrapper {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 32px !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; /* Center vertically */
+}
+
+.guest-split-grid {
+    display: grid !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
+    gap: clamp(30px, 4vw, 80px) !important;
+    align-items: flex-start !important; /* Top alignment */
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Coluna Esquerda e H1 */
+.guest-info-column {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.guest-title {
+    font-size: clamp(32px, 3.5vw, 52px) !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    margin-top: -6px !important; /* Correção óptica de line-height para alinhar com a borda do card */
+}
+.title-highlight {
+    font-size: clamp(28px, 3vw, 46px) !important;
+    padding: 6px 14px !important;
+}
+.guest-text {
+    font-size: clamp(14px, 1.2vw, 17px) !important;
+    line-height: 1.6 !important;
+    color: #CBD5E1 !important;
+}
+.guest-features-list {
+    gap: clamp(12px, 1.5vh, 20px) !important;
+}
+.guest-features-list .feature-details h4 {
+    font-size: clamp(14px, 1.3vw, 18px) !important;
+    font-weight: bold !important;
+}
+.guest-features-list .feature-details p {
+    font-size: clamp(12px, 1.1vw, 15px) !important;
+}
+
+/* Coluna Direita (Card) */
+.guest-form-column {
+    margin-top: 0 !important;
+}
+.interactive-flow-container, #form-state {
+    padding: clamp(24px, 3vh, 40px) clamp(28px, 3vw, 48px) !important;
+    margin-top: 0 !important;
+}
+.offer-pap-logo {
+    height: clamp(45px, 5vh, 70px) !important;
+    margin-bottom: clamp(12px, 1.5vh, 20px) !important;
+}
+.price-main {
+    font-size: clamp(28px, 3vw, 42px) !important;
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+}
+.offer-action .btn-neon-action, .offer-action a.btn-neon-action, #submit-lead-btn {
+    height: clamp(45px, 6vh, 60px) !important;
+    font-size: clamp(13px, 1.2vw, 16px) !important;
+    border-radius: 14px 0px 14px 0px !important;
+}
+
+/* 3. RODAPÉ: Botão e Seta */
+.hero-scroll-wrapper {
+    margin-top: clamp(16px, 3vh, 40px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.btn-scroll-down {
+    font-size: clamp(12px, 1vw, 15px) !important;
+    padding: clamp(6px, 1vh, 10px) clamp(16px, 2vw, 24px) !important;
+}
+.scroll-arrow {
+    color: #74C043 !important;
+    width: clamp(18px, 2vw, 24px) !important;
+    height: clamp(18px, 2vw, 24px) !important;
+    margin-top: 6px !important;
+    animation: bounce 2s infinite !important;
+}
