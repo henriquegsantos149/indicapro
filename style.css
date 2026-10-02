@@ -3801,3 +3801,58 @@ html {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+
+/* =========================================================
+   QUEBRA DE LINHA E REMOÇÃO DA BARRA DE ROLAGEM NAS ABAS
+========================================================= */
+
+.syllabus-tabs {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Permite a quebra de linha */
+    overflow-x: hidden !important; /* Remove barra de rolagem horizontal */
+    justify-content: center !important; /* Centraliza tudo */
+    align-items: center !important;
+    gap: 12px !important; /* Espaçamento entre os botões */
+    width: 100% !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 40px !important;
+}
+
+/* Esconde qualquer resíduo de scrollbar invisível */
+.syllabus-tabs::-webkit-scrollbar {
+    display: none !important;
+}
+
+.tab-btn {
+    white-space: nowrap !important; /* Mantém o texto de cada botão na mesma linha com seu ícone */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important; /* Espaço entre o ícone SVG e o texto */
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+    border: 1px solid #3f3f46 !important;
+    background: transparent !important;
+    border-radius: 20px !important;
+    color: #a1a1aa !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.tab-btn:hover {
+    color: #FFFFFF !important;
+    border-color: #74C043 !important;
+}
+
+.tab-btn.active {
+    background: rgba(116, 192, 67, 0.1) !important;
+    color: #74C043 !important;
+    border-color: #74C043 !important;
+}
+
+.tab-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important; /* Garante que o ícone não seja espremido */
+}
