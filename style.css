@@ -3856,3 +3856,24 @@ html {
     height: 16px !important;
     flex-shrink: 0 !important; /* Garante que o ícone não seja espremido */
 }
+
+
+/* =========================================================
+   AJUSTES DO POP-UP DO FORMULÁRIO (LARGURA E CORES)
+========================================================= */
+.modal-content, .guest-form-card.modal-content {
+    max-width: 640px !important; /* Aumenta a largura para acomodar 2 colunas */
+    width: 95% !important; /* Ajuste seguro para telas menores */
+    max-height: 95vh !important; /* Evita que o modal seja cortado verticalmente */
+    overflow-y: auto !important; /* Permite scroll se ainda for muito alto na tela */
+}
+
+/* Cor branca para os labels */
+.form-group-custom label {
+    color: #FFFFFF !important;
+}
+
+/* Garante que o input text e selects fiquem responsivos */
+.form-row {
+    margin-bottom: 16px !important;
+}

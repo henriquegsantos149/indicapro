@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
     
     <!-- CSS Unificado -->
-    <link rel="stylesheet" href="style.css?v=1790978849658">
+    <link rel="stylesheet" href="style.css?v=1790985152780">
 </head>
 <body class="dark-theme guest-view">
 
@@ -1303,8 +1303,8 @@
                                     <input type="email" id="lead-email" placeholder="nome@exemplo.com" required>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group-custom">
+                            <div class="form-row" style="display: flex; gap: 16px;">
+                                <div class="form-group-custom" style="flex: 1;">
                                     <label for="lead-relation">Qual sua relação com o indicador?</label>
                                     <select id="lead-relation" required>
                                         <option value="" disabled selected>Selecione uma opção</option>
@@ -1315,9 +1315,8 @@
                                         <option value="Outro">Outro</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group-custom">
+                            
+                                <div class="form-group-custom" style="flex: 1;">
                                     <label for="lead-occupation">Atuação profissional</label>
                                     <select id="lead-occupation" required>
                                         <option value="" disabled selected>Selecione uma opção</option>
@@ -1329,7 +1328,9 @@
                                         <option value="Pesquisador">Pesquisador</option>
                                     </select>
                                 </div>
+                            
                             </div>
+                            
                             <div class="form-row">
                                 <div class="form-group-custom">
                                     <label for="lead-hobby">Seu principal interesse na área?</label>
