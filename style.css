@@ -3653,3 +3653,117 @@ html {
     .scroll-arrow { width: 22px !important; height: 22px !important; margin-top: 8px !important; }
 }
 
+
+
+/* =========================================================
+   RESTAURAÇÃO IMPONENTE DA 1ª DOBRA (PEDIDO FINAL)
+========================================================= */
+
+/* 1. CONTAINER E GRID COM FLUXO NATURAL (SEM CORTAR TELA) */
+.hero-fold-wrapper {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 32px 20px !important;
+    height: auto !important;
+    min-height: 90vh !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; 
+}
+
+/* Barra do Topo */
+.guest-view .referral-welcome-banner {
+    margin-top: 10px !important;
+    margin-bottom: 28px !important;
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+}
+
+/* Grid Topo-a-Topo */
+.guest-split-grid {
+    display: grid !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
+    gap: 40px !important;
+    align-items: flex-start !important; 
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* 2. ESCALA DA COLUNA ESQUERDA */
+.guest-info-column { 
+    margin-top: 0 !important; 
+    padding-top: 0 !important; 
+}
+.guest-title {
+    font-size: 36px !important; 
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    margin-top: -6px !important; /* Ajuste milimétrico para igualar o topo da letra com a borda do card */
+    margin-bottom: 16px !important;
+}
+.title-highlight {
+    font-size: 32px !important;
+    padding: 6px 14px !important;
+}
+.guest-text {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    color: #CBD5E1 !important;
+}
+.guest-features-list { 
+    gap: 16px !important; 
+}
+.guest-features-list .feature-details h4 { 
+    font-size: 15px !important; 
+    margin-bottom: 4px !important; 
+    font-weight: bold !important;
+}
+.guest-features-list .feature-details p { 
+    font-size: 13px !important; 
+    line-height: 1.4 !important; 
+}
+
+/* 3. ESCALA DO CARD DE OFERTA */
+.interactive-flow-container, #form-state {
+    padding: 28px 32px !important;
+    margin-top: 0 !important;
+}
+.offer-pap-logo {
+    height: 55px !important;
+    margin-bottom: 12px !important;
+}
+.price-main {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+    margin: 8px 0 !important;
+}
+.offer-action .btn-neon-action, .offer-action a.btn-neon-action, #submit-lead-btn {
+    height: 48px !important;
+    font-size: 14px !important;
+    border-radius: 14px 0px 14px 0px !important;
+    margin-top: 12px !important;
+}
+
+/* 4. RODAPÉ DE NAVEGAÇÃO */
+.hero-scroll-wrapper {
+    margin-top: 32px !important;
+    margin-bottom: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.btn-scroll-down {
+    font-size: 13px !important;
+    padding: 8px 20px !important;
+}
+.scroll-arrow {
+    color: #74C043 !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: 6px !important;
+    animation: bounce 2s infinite !important;
+}
