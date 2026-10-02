@@ -3198,3 +3198,114 @@ html {
     margin-top: 24px !important;
     margin-bottom: 24px !important;
 }
+
+
+/* ---------------------------------
+   REEQUILIBRAÇÃO PROPORCIONAL DE ESCALA HERO (PEDIDO DA LETICIA)
+--------------------------------- */
+/* Container e Grid */
+.hero-fold-wrapper {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 20px 32px !important;
+}
+
+.guest-split-grid {
+    display: grid !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+}
+
+/* Coluna da Esquerda */
+.referral-welcome-banner {
+    font-size: 14px !important;
+    padding: 10px 18px !important;
+    margin-top: 16px !important;
+    margin-bottom: 24px !important;
+}
+
+.guest-title {
+    font-size: 38px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+}
+
+.title-highlight {
+    font-size: 34px !important;
+    padding: 6px 14px !important;
+}
+
+.guest-text {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #CBD5E1 !important;
+}
+
+.guest-features-list {
+    gap: 14px !important;
+}
+
+.guest-features-list .feature-details h4 {
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
+.guest-features-list .feature-details p {
+    font-size: 13px !important;
+}
+
+/* Card Direita */
+.interactive-flow-container, #form-state {
+    padding: 28px 32px !important;
+}
+
+.offer-pap-logo {
+    height: 55px !important;
+    margin-bottom: 12px !important;
+}
+
+.price-main {
+    font-size: 32px !important;
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+}
+
+.offer-action .btn-neon-action, .offer-action a.btn-neon-action, #submit-lead-btn {
+    height: 50px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    background: #74C043 !important;
+    border-radius: 14px 0px 14px 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Botão de navegação e Seta */
+.hero-scroll-wrapper {
+    margin-top: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.btn-scroll-down {
+    font-size: 13px !important;
+    padding: 8px 20px !important;
+}
+
+.scroll-arrow {
+    color: #74C043 !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: 6px !important;
+    animation: bounce 2s infinite !important;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
