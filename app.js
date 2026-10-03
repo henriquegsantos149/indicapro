@@ -824,7 +824,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Redirecionamento direto para o checkout com a tag de indicação (ref)
             setTimeout(() => {
-                window.location.href = `https://pay.voompcreators.com.br/428?ref=${encodeURIComponent(refUser)}`;
+                window.location.href = `https://pay.voompcreators.com.br/428?ref=${encodeURIComponent(refUser)}&cupom=INDICAPRO`;
             }, 400);
         });
     }
