@@ -3877,3 +3877,42 @@ html {
 .form-row {
     margin-bottom: 16px !important;
 }
+
+
+/* =========================================================
+   COMPACTAÇÃO VERTICAL DO POP-UP (REMOVER SCROLL)
+========================================================= */
+/* Reduzir padding interno do pop-up para sobrar mais espaço na tela */
+.modal-content, .guest-form-card.modal-content {
+    padding: 24px !important;
+}
+
+/* Reduzir margem abaixo do título */
+.form-header {
+    margin-bottom: 16px !important;
+}
+
+/* Eliminar margem dupla: o form-row já tem margin, o form-group também tinha. Zeramos o do group */
+.form-group-custom {
+    margin-bottom: 0 !important;
+}
+
+/* Reduzir margem entre as linhas do formulário */
+.form-row {
+    margin-bottom: 12px !important;
+}
+
+/* Reduzir levemente a altura dos campos (padding interno) e margem da label */
+.form-group-custom label {
+    margin-bottom: 4px !important;
+    font-size: 11px !important;
+}
+.form-group-custom input, 
+.form-group-custom select {
+    padding: 10px 16px !important;
+}
+
+/* Reduzir espaço acima do botão final */
+#submit-lead-btn {
+    margin-top: 8px !important;
+}
