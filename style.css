@@ -3916,3 +3916,28 @@ html {
 #submit-lead-btn {
     margin-top: 8px !important;
 }
+
+
+/* =========================================================
+   AUMENTO DA LOGO DO MEC (+75%)
+========================================================= */
+.mec-seal-img {
+    height: 280px !important;
+    width: auto !important;
+    min-width: 245px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15)) !important;
+}
+
+@media (max-width: 768px) {
+    .mec-seal-img {
+        height: 200px !important; /* Ajuste proporcional para mobile */
+        min-width: 180px !important;
+        margin: 0 auto 24px auto !important;
+    }
+}
