@@ -781,7 +781,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newLeadForm = leadForm.cloneNode(true);
         leadForm.parentNode.replaceChild(newLeadForm, leadForm);
 
-        newLeadForm.addEventListener('submit', async (e) => {
+        newLeadForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const submitBtn = document.getElementById('submit-lead-btn');
             if (submitBtn) {
@@ -794,38 +794,57 @@ document.addEventListener('DOMContentLoaded', () => {
             let decodedEmail = "";
             try {
                 if (urlParams.get("em")) decodedEmail = atob(urlParams.get("em"));
-            } catch(e) {}
+            } catch(err) {}
 
             // Dados do form
             const name = document.getElementById("lead-name").value;
             const email = document.getElementById("lead-email").value;
-            const relacao = document.getElementById("lead-relation").value;
-            const atuacao = document.getElementById("lead-occupation").value;
-            const hobby = document.getElementById("lead-hobby").value;
+            const relacao = document.getElementById("lead-relation") ? document.getElementById("lead-relation").value : "";
+            const atuacao = document.getElementById("lead-occupation") ? document.getElementById("lead-occupation").value : "";
+            const hobby = document.getElementById("lead-hobby") ? document.getElementById("lead-hobby").value : "";
 
-            try {
-                const formData = new URLSearchParams();
-                formData.append("indicador", refUser);
-                formData.append("emailIndicador", decodedEmail);
-                formData.append("convidado", name);
-                formData.append("email", email);
-                formData.append("relacao", relacao);
-                formData.append("atuacao", atuacao);
-                formData.append("hobby", hobby);
+            const formData = new URLSearchParams();
+            formData.append("indicador", refUser);
+            formData.append("emailIndicador", decodedEmail);
+            formData.append("convidado", name);
+            formData.append("email", email);
+            formData.append("relacao", relacao);
+            formData.append("atuacao", atuacao);
+            formData.append("hobby", hobby);
 
-                await fetch(WEB_APP_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    body: formData
-                });
-            } catch (err) {
-                console.error("Erro no envio:", err);
+            // Fire and forget (sem await para não bloquear o popup_blocker)
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).catch(err => console.error("Erro no envio:", err));
+
+            // URL final com desconto
+            const checkoutUrl = `https://pay.voompcreators.com.br/428?ref=${encodeURIComponent(refUser)}&cupom=INDICAPRO`;
+
+            // 1. Abre o checkout em nova aba IMEDIATAMENTE (evita bloqueador de popups)
+            window.open(checkoutUrl, '_blank');
+
+            // 2. Fecha o pop-up atual
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            if (modalBackdrop) modalBackdrop.classList.add('hidden');
+
+            // 3. Atualiza o botão da página (oferta)
+            const btnS = document.getElementById('btn-show-form');
+            const btnC = document.getElementById('btn-checkout-final');
+
+            if (btnS) btnS.classList.add('hidden');
+            if (btnC) {
+                btnC.classList.remove('hidden');
+                btnC.textContent = "DESCONTO LIBERADO";
+                btnC.href = checkoutUrl;
             }
 
-            // Redirecionamento direto para o checkout com a tag de indicação (ref)
-            setTimeout(() => {
-                window.location.href = `https://pay.voompcreators.com.br/428?ref=${encodeURIComponent(refUser)}&cupom=INDICAPRO`;
-            }, 400);
+            // 4. Restaura o formulário caso o usuário abra de novo
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "GARANTIR MINHA MATRÍCULA";
+            }
         });
     }
 
@@ -938,21 +957,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // Make sure form submission hides modal and shows checkout button
-    const leadFormEl = document.getElementById('ref-lead-form');
-    if (leadFormEl) {
-        // We will intercept submit
-        leadFormEl.addEventListener('submit', (e) => {
-            const modalBackdrop = document.getElementById('modal-backdrop');
-            if (modalBackdrop) {
-                modalBackdrop.classList.add('hidden'); // Close modal
-            }
-            // The original logic handles Voomp webhook and shows the btn-checkout-final
-            // We just ensure btnShowForm is hidden and btnCheckoutFinal is shown.
-            const btnS = document.getElementById('btn-show-form');
-            const btnC = document.getElementById('btn-checkout-final');
-            if (btnS) btnS.classList.add('hidden');
-            if (btnC) btnC.classList.remove('hidden');
-        });
-    }
+    
 });
