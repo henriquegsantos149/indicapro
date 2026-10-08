@@ -3922,9 +3922,10 @@ html {
    AUMENTO DA LOGO DO MEC (+75%)
 ========================================================= */
 .mec-seal-img {
-    height: 280px !important;
-    width: auto !important;
-    min-width: 245px !important;
+    height: 380px !important;
+    width: 380px !important;
+    min-width: 380px !important;
+    min-height: 380px !important;
     max-width: none !important;
     max-height: none !important;
     object-fit: contain !important;
@@ -3932,6 +3933,8 @@ html {
     display: block !important;
     margin: 0 !important;
     filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15)) !important;
+    /* Optional scale if there is transparent padding in the image */
+    transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
