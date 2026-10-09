@@ -3919,13 +3919,19 @@ html {
 
 
 /* =========================================================
-   AUMENTO DA LOGO DO MEC (+75%)
+   AUMENTO E AJUSTE DA LOGO DO MEC
 ========================================================= */
+/* Reduz a altura extra da dobra branca */
+.mec-banner-section {
+    padding: 60px 20px !important;
+}
+
 .mec-seal-img {
-    height: 380px !important;
-    width: 380px !important;
-    min-width: 380px !important;
-    min-height: 380px !important;
+    /* Dimensões reais do elemento (para não empurrar a altura da dobra) */
+    height: 220px !important;
+    width: 220px !important;
+    min-width: 220px !important;
+    min-height: 220px !important;
     max-width: none !important;
     max-height: none !important;
     object-fit: contain !important;
@@ -3933,8 +3939,17 @@ html {
     display: block !important;
     margin: 0 !important;
     filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15)) !important;
-    /* Optional scale if there is transparent padding in the image */
-    transform: scale(1.15);
+    
+    /* Amplia a imagem visualmente "por cima" do fundo transparente sem quebrar o layout */
+    transform: scale(1.6);
+    transform-origin: center;
+}
+
+@media (max-width: 768px) {
+    .mec-seal-img {
+        transform: scale(1.3);
+        margin: 20px auto 40px auto !important;
+    }
 }
 
 @media (max-width: 768px) {
