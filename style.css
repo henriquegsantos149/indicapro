@@ -3959,3 +3959,18 @@ html {
         margin: 0 auto 24px auto !important;
     }
 }
+
+/* =========================================================
+   AJUSTE DE ESPAÇAMENTO NAS ABAS (EMENTA)
+========================================================= */
+.accordion-inner {
+    padding-top: 40px !important; /* Afasta o OBJETIVO DO MÓDULO do título da barra */
+}
+
+.accordion-inner .acc-section-title:not(:first-child) {
+    margin-top: 40px !important; /* Afasta FOCO PRÁTICO E APLICAÇÃO do texto acima */
+}
+
+.accordion-inner .acc-topics-title {
+    margin-top: 40px !important;
+}
