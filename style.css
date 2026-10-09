@@ -4005,3 +4005,26 @@ html {
         align-items: center;
     }
 }
+
+/* =========================================================
+   REDUÇÃO DE LARGURA DA 1ª DOBRA (APROXIMAÇÃO E FOCO)
+========================================================= */
+.hero-fold-wrapper {
+    max-width: 1150px !important; /* Reduz de 1400px para aproximar os itens */
+}
+
+/* Garante que a barra acompanhe exatamente a mesma largura do container/grid */
+.guest-view .referral-welcome-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Opcional: reduz um pouquinho o gap em telas enormes para evitar o vazio no meio */
+@media (min-width: 1400px) and (min-height: 850px) {
+    .guest-split-grid { 
+        gap: 40px !important; /* Antes era 60px */
+    }
+}
