@@ -3974,3 +3974,29 @@ html {
 .accordion-inner .acc-topics-title {
     margin-top: 40px !important;
 }
+
+/* =========================================================
+   AJUSTE RODAPÉ (REMOÇÃO DA LINHA SUPERIOR E CENTRALIZAÇÃO)
+========================================================= */
+.main-footer {
+    border-top: none !important; /* Remove linha divisória do topo */
+}
+.footer-top {
+    max-width: 1000px !important;
+    margin: 0 auto 30px auto !important;
+    justify-content: center !important;
+    gap: 80px !important;
+}
+@media (max-width: 768px) {
+    .footer-top {
+        gap: 40px !important;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-menu {
+        flex-direction: column;
+        gap: 30px !important;
+        align-items: center;
+    }
+}
