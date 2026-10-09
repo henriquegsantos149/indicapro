@@ -3980,12 +3980,17 @@ html {
 ========================================================= */
 .main-footer {
     border-top: none !important; /* Remove linha divisória do topo */
+    margin-top: 0px !important; /* Reduz espaço vazio escuro no topo */
+    padding-top: 40px !important; /* Mantém apenas um respiro suave */
 }
 .footer-top {
     max-width: 1000px !important;
-    margin: 0 auto 30px auto !important;
+    margin: 0 auto 20px auto !important; /* Reduz espaço entre as colunas e a linha de copyright */
     justify-content: center !important;
     gap: 80px !important;
+}
+.footer-bottom {
+    padding: 16px 0 !important; /* Reduz espaço interno na área do copyright */
 }
 @media (max-width: 768px) {
     .footer-top {
