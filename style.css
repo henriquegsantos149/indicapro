@@ -4028,3 +4028,27 @@ html {
         gap: 40px !important; /* Antes era 60px */
     }
 }
+
+/* =========================================================
+   ALINHAMENTO EXATO DO TÍTULO COM O CARD DE OFERTA
+========================================================= */
+.guest-split-grid {
+    align-items: flex-start !important; /* Garante alinhamento pelo topo */
+}
+
+/* Zera margens extras para que as caixas fiquem na mesma linha horizontal */
+.guest-info-column, .guest-form-column {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.guest-form-card {
+    margin-top: 0 !important; /* Garante que o card não desça */
+}
+
+.guest-title {
+    /* Zera a margem negativa antiga (-9px) que estava jogando o texto para cima do card */
+    margin-top: 0 !important; 
+    /* Um leve micro-ajuste caso a altura da linha da fonte empurre o texto para baixo visualmente */
+    transform: translateY(-3px); 
+}
