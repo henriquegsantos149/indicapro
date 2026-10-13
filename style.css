@@ -3976,33 +3976,84 @@ html {
 }
 
 /* =========================================================
-   AJUSTE RODAPÉ (REMOÇÃO DA LINHA SUPERIOR E CENTRALIZAÇÃO)
+   AJUSTE RODAPÉ (LARGURA, ESPAÇAMENTO E ALINHAMENTO)
 ========================================================= */
 .main-footer {
-    border-top: none !important; /* Remove linha divisória do topo */
-    margin-top: 0px !important; /* Reduz espaço vazio escuro no topo */
-    padding-top: 40px !important; /* Mantém apenas um respiro suave */
+    border-top: none !important; /* Sem linha divisória no topo do rodapé */
+    margin-top: 0px !important;
+    padding: 64px 0 32px 0 !important; /* Padding vertical generoso (64px superior, 32px inferior) */
+    box-sizing: border-box !important;
 }
+
 .footer-top {
-    max-width: 1000px !important;
-    margin: 0 auto 20px auto !important; /* Reduz espaço entre as colunas e a linha de copyright */
-    justify-content: center !important;
-    gap: 80px !important;
+    display: flex !important;
+    justify-content: space-between !important; /* Distribui as colunas de forma elegante e equilibrada */
+    flex-wrap: wrap !important;
+    max-width: 1200px !important; /* Container interno ampliado para 1200px */
+    width: 100% !important;
+    margin: 0 auto 48px auto !important; /* Espaçamento inferior de 48px afastando da linha divisória */
+    padding: 0 24px !important;
+    box-sizing: border-box !important;
+    gap: 40px !important;
 }
+
+.footer-logo-area {
+    max-width: 400px !important;
+    flex: 1 1 320px !important;
+}
+
+.footer-menu {
+    display: contents !important; /* Permite que Institucional e Contato sejam distribuídos diretamente no flex container */
+}
+
+.footer-menu .menu-col,
+.footer-top .menu-col {
+    min-width: 150px !important;
+}
+
 .footer-bottom {
-    padding: 16px 0 !important; /* Reduz espaço interno na área do copyright */
+    max-width: 1200px !important; /* Mesma largura máxima alinhada ao container das colunas */
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 32px 24px 0 24px !important; /* Afasta a linha e o texto de copyright para baixo */
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important; /* Linha divisória sutil do rodapé inferior */
+    box-sizing: border-box !important;
+    text-align: center !important;
 }
+
+.footer-bottom p {
+    font-size: 12px !important;
+    color: #a1a1aa !important;
+    margin: 0 !important;
+    line-height: 1.6 !important;
+}
+
 @media (max-width: 768px) {
+    .main-footer {
+        padding: 48px 0 24px 0 !important;
+    }
     .footer-top {
-        gap: 40px !important;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 36px !important;
+        margin-bottom: 36px !important;
+    }
+    .footer-logo-area {
+        max-width: 100% !important;
     }
     .footer-menu {
-        flex-direction: column;
-        gap: 30px !important;
-        align-items: center;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 32px !important;
+    }
+    .footer-menu .menu-col,
+    .footer-top .menu-col {
+        text-align: center !important;
+    }
+    .footer-bottom {
+        padding-top: 24px !important;
     }
 }
 
