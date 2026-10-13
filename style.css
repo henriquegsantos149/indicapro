@@ -3979,10 +3979,16 @@ html {
    AJUSTE RODAPÉ (LARGURA, ESPAÇAMENTO E ALINHAMENTO)
 ========================================================= */
 .main-footer {
-    border-top: none !important; /* Sem linha divisória no topo do rodapé */
-    margin-top: 0px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important; /* Divisão do rodapé em relação ao restante da página (premiações) */
+    margin-top: 48px !important; /* Respiro entre o conteúdo da página e a linha divisória */
     padding: 64px 0 32px 0 !important; /* Padding vertical generoso (64px superior, 32px inferior) */
     box-sizing: border-box !important;
+}
+
+/* Na página do convidado (com selo MEC), remove border-top e margin-top para encostar harmonicamente */
+.guest-view .main-footer {
+    border-top: none !important;
+    margin-top: 0px !important;
 }
 
 .footer-top {
