@@ -524,6 +524,14 @@ body {
     flex-grow: 1;
 }
 
+.reward-card {
+    overflow: visible !important;
+}
+
+.reward-card:hover {
+    z-index: 50;
+}
+
 .reward-title {
     font-size: 13.5px;
     font-weight: 600;
@@ -531,6 +539,88 @@ body {
     line-height: 1.4;
     margin-bottom: 8px;
     min-height: 38px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    position: relative;
+}
+
+/* Tooltip Informativo do Card de Recompensa (Passaporte Ouro) */
+.reward-tooltip-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+}
+
+.reward-tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-green-tech, #74C043);
+    background: rgba(116, 192, 67, 0.12);
+    border: 1px solid rgba(116, 192, 67, 0.35);
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.reward-tooltip-wrapper:hover .reward-tooltip-icon,
+.reward-tooltip-wrapper:focus .reward-tooltip-icon {
+    background: var(--color-green-tech, #74C043);
+    color: #0b0f19;
+    box-shadow: 0 0 10px rgba(116, 192, 67, 0.6);
+    transform: scale(1.1);
+}
+
+.reward-tooltip-popup {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    width: 250px;
+    max-width: 85vw;
+    background: #0f1422;
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(116, 192, 67, 0.4);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8), 0 0 15px rgba(116, 192, 67, 0.15);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 9999;
+}
+
+.reward-tooltip-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(116, 192, 67, 0.4) transparent transparent transparent;
+}
+
+.reward-tooltip-wrapper:hover .reward-tooltip-popup,
+.reward-tooltip-wrapper:focus .reward-tooltip-popup,
+.reward-tooltip-wrapper:focus-within .reward-tooltip-popup,
+.reward-tooltip-popup.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 .reward-points {
