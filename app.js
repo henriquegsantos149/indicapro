@@ -8,24 +8,10 @@ const REWARDS_CATALOG = [
     {
         id: "portfolio-mapas",
         points: 100,
-        title: "Portfólio de Mapas pronto em 30 minutos",
+        title: "Portfólio de Mapas",
         category: "Digital",
-        banner: `<div class="banner-svg-wrapper" style="width: 100%; height: 180px; background: linear-gradient(135deg, #090d18 0%, #101a2e 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; box-sizing: border-box;">
-            <svg width="100%" height="100%" style="position:absolute; top:0; left:0; opacity: 0.12;" viewBox="0 0 320 180">
-                <circle cx="160" cy="90" r="70" stroke="#74C043" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
-                <line x1="0" y1="90" x2="320" y2="90" stroke="#31A8A8" stroke-width="1"/>
-                <line x1="160" y1="0" x2="160" y2="180" stroke="#31A8A8" stroke-width="1"/>
-            </svg>
-            <div style="width: 52px; height: 52px; border-radius: 12px; background: rgba(116, 192, 67, 0.12); border: 1.5px solid rgba(116, 192, 67, 0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 10px; z-index: 2; box-shadow: 0 4px 15px rgba(116, 192, 67, 0.2);">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#74C043" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-                    <line x1="8" y1="2" x2="8" y2="18"></line>
-                    <line x1="16" y1="6" x2="16" y2="22"></line>
-                </svg>
-            </div>
-            <div style="font-family: var(--font-sans, 'Montserrat', sans-serif); font-size: 11px; font-weight: 800; color: #74C043; letter-spacing: 2px; text-transform: uppercase; z-index: 2;">TEMPLATES & LAYOUTS</div>
-            <div style="font-family: var(--font-display, 'Montserrat', sans-serif); font-size: 15px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; text-align: center; margin-top: 4px; z-index: 2; padding: 0 12px;">PORTFÓLIO DE MAPAS</div>
-            <div style="margin-top: 6px; background: rgba(49, 168, 168, 0.15); border: 1px solid rgba(49, 168, 168, 0.35); color: #31A8A8; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 12px; z-index: 2;">PRONTO EM 30 MIN</div>
+        banner: `<div class="banner-svg-wrapper flex-center" style="background: #ffffff; display: flex; justify-content: center; align-items: center; width: 100%; height: 180px; overflow: hidden;">
+            <img src="images/portfolio-de-mapas.png" class="reward-thumbnail-img" alt="Portfólio de Mapas" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
         </div>`
     },
     {
@@ -33,21 +19,8 @@ const REWARDS_CATALOG = [
         points: 100,
         title: "Manual de Áreas Contaminadas",
         category: "Digital",
-        banner: `<div class="banner-svg-wrapper" style="width: 100%; height: 180px; background: linear-gradient(135deg, #090d18 0%, #161c14 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; box-sizing: border-box;">
-            <svg width="100%" height="100%" style="position:absolute; top:0; left:0; opacity: 0.12;" viewBox="0 0 320 180">
-                <path d="M 0 45 L 320 45 M 0 90 L 320 90 M 0 135 L 320 135" stroke="#74C043" stroke-width="1"/>
-                <path d="M 60 0 L 100 180 M 160 0 L 160 180 M 260 0 L 220 180" stroke="#74C043" stroke-width="1"/>
-            </svg>
-            <div style="width: 52px; height: 52px; border-radius: 12px; background: rgba(116, 192, 67, 0.12); border: 1.5px solid rgba(116, 192, 67, 0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 10px; z-index: 2; box-shadow: 0 4px 15px rgba(116, 192, 67, 0.2);">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#74C043" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <path d="M12 8v4"></path>
-                    <path d="M12 16h.01"></path>
-                </svg>
-            </div>
-            <div style="font-family: var(--font-sans, 'Montserrat', sans-serif); font-size: 11px; font-weight: 800; color: #74C043; letter-spacing: 2px; text-transform: uppercase; z-index: 2;">GUIA PRÁTICO</div>
-            <div style="font-family: var(--font-display, 'Montserrat', sans-serif); font-size: 14px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; text-align: center; margin-top: 4px; z-index: 2; padding: 0 12px;">ÁREAS CONTAMINADAS</div>
-            <div style="margin-top: 6px; background: rgba(116, 192, 67, 0.15); border: 1px solid rgba(116, 192, 67, 0.35); color: #74C043; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 12px; z-index: 2;">DIAGNÓSTICO E GESTÃO</div>
+        banner: `<div class="banner-svg-wrapper flex-center" style="background: #ffffff; display: flex; justify-content: center; align-items: center; width: 100%; height: 180px; overflow: hidden;">
+            <img src="images/manual-areas-contaminadas.png" class="reward-thumbnail-img" alt="Manual de Áreas Contaminadas" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
         </div>`
     },
     {
@@ -55,23 +28,8 @@ const REWARDS_CATALOG = [
         points: 100,
         title: "Manual da Nova Lei do Licenciamento",
         category: "Digital",
-        banner: `<div class="banner-svg-wrapper" style="width: 100%; height: 180px; background: linear-gradient(135deg, #090d18 0%, #151829 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; box-sizing: border-box;">
-            <svg width="100%" height="100%" style="position:absolute; top:0; left:0; opacity: 0.12;" viewBox="0 0 320 180">
-                <rect x="30" y="20" width="260" height="140" rx="8" stroke="#31A8A8" stroke-width="1" fill="none"/>
-                <line x1="30" y1="60" x2="290" y2="60" stroke="#31A8A8" stroke-width="1"/>
-            </svg>
-            <div style="width: 52px; height: 52px; border-radius: 12px; background: rgba(49, 168, 168, 0.12); border: 1.5px solid rgba(49, 168, 168, 0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 10px; z-index: 2; box-shadow: 0 4px 15px rgba(49, 168, 168, 0.2);">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#31A8A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-            </div>
-            <div style="font-family: var(--font-sans, 'Montserrat', sans-serif); font-size: 11px; font-weight: 800; color: #31A8A8; letter-spacing: 2px; text-transform: uppercase; z-index: 2;">LEGISLAÇÃO AMBIENTAL</div>
-            <div style="font-family: var(--font-display, 'Montserrat', sans-serif); font-size: 14px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; text-align: center; margin-top: 4px; z-index: 2; padding: 0 12px;">NOVA LEI DO LICENCIAMENTO</div>
-            <div style="margin-top: 6px; background: rgba(49, 168, 168, 0.15); border: 1px solid rgba(49, 168, 168, 0.35); color: #31A8A8; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 12px; z-index: 2;">CONFORMIDADE & PRÁTICA</div>
+        banner: `<div class="banner-svg-wrapper flex-center" style="background: #ffffff; display: flex; justify-content: center; align-items: center; width: 100%; height: 180px; overflow: hidden;">
+            <img src="images/manual-nova-lei.jpg" class="reward-thumbnail-img" alt="Manual da Nova Lei do Licenciamento" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
         </div>`
     },
     {
