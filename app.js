@@ -64,7 +64,9 @@ const REWARDS_CATALOG = [
         points: 200,
         title: "Workshop WebGIS na Prática",
         category: "Digital",
-        banner: `<img src="images/workshop-webgis.jpg" class="reward-thumbnail-img" alt="Workshop WebGIS">`
+        banner: `<div class="banner-svg-wrapper flex-center" style="background: #f6f4f5; display: flex; justify-content: center; align-items: center; width: 100%; height: 180px; overflow: hidden;">
+            <img src="images/workshop-webgis.jpg" class="reward-thumbnail-img" alt="Workshop WebGIS na Prática" style="width: 100%; height: 100%; object-fit: contain; padding: 10px;">
+        </div>`
     },
     {
         id: "acesso-vitalicio-pap",
@@ -108,14 +110,6 @@ const REWARDS_CATALOG = [
                 <text x="160" y="143" fill="#31A8A8" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8px" text-anchor="middle">✔ PAGAMENTO GARANTIDO</text>
             </svg>
         </div>`
-    },
-    {
-        id: "passaporte-ouro",
-        points: 300,
-        title: "Passaporte Ouro Ambiental Pro",
-        category: "Digital",
-        descriptionTooltip: "Condição especial que garante acesso a todos os Congressos e Fábricas de Especialistas oferecidos pela Ambiental Pro ao longo de 2026.",
-        banner: `<img src="images/passaporte-ouro-nobg.png" class="reward-thumbnail-img" alt="Passaporte Ouro">`
     },
     {
         id: "credito-500",
