@@ -196,12 +196,17 @@ function loadState() {
     // Sobrescreve com Query Strings se presentes na URL
     const urlParams = new URLSearchParams(window.location.search);
     const nome = urlParams.get("nome") || urlParams.get("aluno");
+    const emailParam = urlParams.get("email");
     const pontos = urlParams.get("pontos");
     const pendentes = urlParams.get("pendentes");
     
     let stateChanged = false;
     if (nome !== null) {
         userState.name = nome;
+        stateChanged = true;
+    }
+    if (emailParam !== null) {
+        userState.email = emailParam;
         stateChanged = true;
     }
     if (pontos !== null) {
@@ -260,10 +265,38 @@ function initStudentPage() {
         }
     }
 
+    // Registra silenciosamente o acesso do aluno na planilha Google
+    function logStudentAccess(tipoEvento = "Acesso") {
+        if (!userState.name || userState.name === "Aluno" || !userState.email) return;
+
+        // Evita múltiplos registros idênticos na mesma sessão do navegador (ex: refresh na página)
+        const sessionKey = `indica_pro_logged_access_${userState.email}`;
+        if (sessionStorage.getItem(sessionKey)) return;
+
+        try {
+            const formData = new URLSearchParams();
+            formData.append("action", "registro_acesso");
+            formData.append("aluno", userState.name);
+            formData.append("emailAluno", userState.email);
+            formData.append("tipoEvento", tipoEvento);
+
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
+                sessionStorage.setItem(sessionKey, "true");
+            }).catch(err => console.error("Erro silencioso ao registrar acesso:", err));
+        } catch (e) {
+            console.error("Erro no registro de acesso:", e);
+        }
+    }
+
     if (authModal && (!userState.email || userState.name === "Aluno" || !userState.name)) {
         authModal.classList.remove("hidden");
     } else {
         syncPointsWithDatabase(); // Sincroniza se já estiver logado
+        logStudentAccess("Reacesso");
     }
     
     if (authSubmitBtn) {
@@ -279,6 +312,7 @@ function initStudentPage() {
                 authModal.classList.add("hidden");
                 renderStudentView(); // Atualiza nome imediatamente
                 syncPointsWithDatabase(); // Busca os pontos na planilha
+                logStudentAccess("Primeiro Acesso");
             } else {
                 alert("Por favor, preencha todos os campos para continuar.");
             }

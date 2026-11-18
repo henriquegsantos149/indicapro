@@ -4199,3 +4199,74 @@ html {
     /* Um leve micro-ajuste caso a altura da linha da fonte empurre o texto para baixo visualmente */
     transform: translateY(-3px); 
 }
+
+/* =========================================================
+   BOTÃO FLUTUANTE DE WHATSAPP (SUPORTE DO ALUNO)
+========================================================= */
+.whatsapp-float-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 900;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 10px 18px 10px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4), 0 2px 8px rgba(0, 0, 0, 0.35);
+    font-family: var(--font-primary, 'Montserrat', sans-serif);
+    font-weight: 700;
+    font-size: 13.5px;
+    letter-spacing: 0.2px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+}
+
+.whatsapp-float-btn:hover {
+    background: #20ba5a;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+    color: #ffffff !important;
+}
+
+.whatsapp-float-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.whatsapp-icon-svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+}
+
+.whatsapp-float-label {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+        border-radius: 50%;
+    }
+    
+    .whatsapp-float-label {
+        display: none;
+    }
+
+    .whatsapp-icon-svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
