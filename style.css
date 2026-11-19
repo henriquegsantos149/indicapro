@@ -1213,13 +1213,14 @@ body {
 }
 
 .modal-checklist ul {
-    padding-left: 16px;
-    font-size: 11px;
-    color: var(--text-secondary);
+    padding-left: 18px;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--text-light);
 }
 
 .modal-checklist li {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .modal-footer {

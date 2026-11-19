@@ -574,11 +574,38 @@ function renderRewardsGrid() {
 
                     renderStudentView();
 
-                    // Exibe confirmação modal
+                    // Exibe confirmação modal personalizada de acordo com o prêmio
                     const modal = document.getElementById("claim-modal");
                     const mTitle = document.getElementById("modal-prize-title");
+                    const mChecklistTitle = document.getElementById("modal-checklist-title");
+                    const mChecklistItems = document.getElementById("modal-checklist-items");
+
                     if (modal && mTitle) {
                         mTitle.textContent = reward.title;
+
+                        if (mChecklistItems) {
+                            if (reward.category === "Crédito Financeiro") {
+                                if (mChecklistTitle) mChecklistTitle.innerHTML = "<strong>Como funciona o pagamento do PIX:</strong>";
+                                mChecklistItems.innerHTML = `
+                                    <li>Nossa equipe entrará em contato via WhatsApp para confirmar sua chave PIX.</li>
+                                    <li>O pagamento é efetuado após o término do período de garantia de 15 dias da matrícula do amigo indicado.</li>
+                                    <li>Você receberá o comprovante bancário da transferência diretamente no seu WhatsApp.</li>
+                                `;
+                            } else if (reward.id === "acesso-vitalicio-pap" || reward.id === "desconto-pos") {
+                                if (mChecklistTitle) mChecklistTitle.innerHTML = "<strong>Como funciona a liberação:</strong>";
+                                mChecklistItems.innerHTML = `
+                                    <li>Sua condição especial será aplicada diretamente no seu cadastro de aluno.</li>
+                                    <li>Nossa equipe confirmará a liberação no seu WhatsApp e por e-mail em até 24h.</li>
+                                `;
+                            } else {
+                                if (mChecklistTitle) mChecklistTitle.innerHTML = "<strong>Como funciona o acesso:</strong>";
+                                mChecklistItems.innerHTML = `
+                                    <li>Material digital liberado diretamente no seu e-mail de aluno em até 24h.</li>
+                                    <li>Fique atento à sua caixa de entrada e spam para acessar o conteúdo.</li>
+                                `;
+                            }
+                        }
+
                         modal.classList.remove("hidden");
                     }
                 } catch (e) {
