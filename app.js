@@ -69,6 +69,22 @@ const REWARDS_CATALOG = [
         </div>`
     },
     {
+        id: "credito-100",
+        points: 200,
+        title: "PIX de R$ 100",
+        category: "Crédito Financeiro",
+        banner: `<div class="banner-svg-wrapper cash-banner">
+            <svg width="100%" height="100%" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="180" fill="#0b0d19" />
+                <rect x="15" y="15" width="290" height="150" rx="10" stroke="#6FB03A" stroke-width="1.5" style="filter: drop-shadow(0px 0px 4px rgba(111,176,58,0.25));" />
+                <text x="160" y="85" fill="#ffffff" font-family="'Montserrat', sans-serif" font-weight="900" font-size="34px" text-anchor="middle" style="letter-spacing:1px;">R$ 100</text>
+                <text x="160" y="112" fill="#6FB03A" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12px" text-anchor="middle" style="letter-spacing:1px;">CRÉDITO EM CONTA / PIX</text>
+                <rect x="95" y="130" width="130" height="20" rx="10" fill="rgba(49,168,168,0.1)" stroke="#31A8A8" stroke-width="1"/>
+                <text x="160" y="143" fill="#31A8A8" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8px" text-anchor="middle">✔ PAGAMENTO GARANTIDO</text>
+            </svg>
+        </div>`
+    },
+    {
         id: "acesso-vitalicio-pap",
         points: 400,
         title: "Acesso Vitalício ao PAP",
@@ -93,22 +109,6 @@ const REWARDS_CATALOG = [
             <div style="margin-top: 10px; background: linear-gradient(90deg, #6FB03A 0%, #31A8A8 100%); color: #0b0d19; font-weight: 800; font-size: 14px; padding: 4px 14px; border-radius: 20px; z-index: 2; box-shadow: 0 4px 15px rgba(111,176,58,0.3);">
                 50% OFF
             </div>
-        </div>`
-    },
-    {
-        id: "credito-100",
-        points: 200,
-        title: "PIX de R$ 100",
-        category: "Crédito Financeiro",
-        banner: `<div class="banner-svg-wrapper cash-banner">
-            <svg width="100%" height="100%" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="320" height="180" fill="#0b0d19" />
-                <rect x="15" y="15" width="290" height="150" rx="10" stroke="#6FB03A" stroke-width="1.5" style="filter: drop-shadow(0px 0px 4px rgba(111,176,58,0.25));" />
-                <text x="160" y="85" fill="#ffffff" font-family="'Montserrat', sans-serif" font-weight="900" font-size="34px" text-anchor="middle" style="letter-spacing:1px;">R$ 100</text>
-                <text x="160" y="112" fill="#6FB03A" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12px" text-anchor="middle" style="letter-spacing:1px;">CRÉDITO EM CONTA / PIX</text>
-                <rect x="95" y="130" width="130" height="20" rx="10" fill="rgba(49,168,168,0.1)" stroke="#31A8A8" stroke-width="1"/>
-                <text x="160" y="143" fill="#31A8A8" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8px" text-anchor="middle">✔ PAGAMENTO GARANTIDO</text>
-            </svg>
         </div>`
     },
     {
