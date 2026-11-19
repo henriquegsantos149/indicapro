@@ -409,7 +409,7 @@ function initStudentPage() {
     if (regulamentoLink) {
         regulamentoLink.addEventListener("click", (e) => {
             e.preventDefault();
-            alert("Regulamento Indica Pro:\n\n1. O programa é de uso exclusivo para captar novos alunos.\n2. A cada matrícula validada, o aluno indicador ganha 200 pontos.\n3. Validação após superar o prazo legal de garantia/cancelamento de 15 dias.\n4. Prêmios físicos disponíveis apenas para entrega no Brasil.");
+            alert("Regulamento Indica Pro:\n\n1. O programa é de uso exclusivo de alunos da Ambiental Pro para indicação de novos alunos.\n2. A cada amigo matriculado através do seu link, você ganha 200 pontos no painel.\n3. Materiais digitais e condições especiais são liberados em até 24 horas.\n4. Para prêmios em dinheiro (PIX), o pagamento é efetuado pela nossa equipe via WhatsApp após o término do período de garantia de 15 dias da matrícula.");
         });
     }
 }
