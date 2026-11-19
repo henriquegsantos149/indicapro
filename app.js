@@ -70,7 +70,7 @@ const REWARDS_CATALOG = [
     },
     {
         id: "acesso-vitalicio-pap",
-        points: 200,
+        points: 400,
         title: "Acesso Vitalício ao PAP",
         category: "Digital",
         banner: `<div class="banner-svg-wrapper flex-center" style="background: #0b0d19; display:flex; justify-content:center; align-items:center; width:100%; height:180px; padding: 20px; box-sizing: border-box;">
@@ -79,7 +79,7 @@ const REWARDS_CATALOG = [
     },
     {
         id: "desconto-pos",
-        points: 200,
+        points: 400,
         title: "50% de Desconto na Pós-Graduação",
         category: "Digital",
         banner: `<div class="banner-svg-wrapper" style="width: 100%; height: 180px; background: #0b0d19; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; box-sizing: border-box;">
@@ -113,7 +113,7 @@ const REWARDS_CATALOG = [
     },
     {
         id: "credito-500",
-        points: 400,
+        points: 600,
         title: "PIX de R$ 500",
         category: "Crédito Financeiro",
         banner: `<div class="banner-svg-wrapper cash-banner">
@@ -129,7 +129,7 @@ const REWARDS_CATALOG = [
     },
     {
         id: "credito-1000",
-        points: 1200,
+        points: 1000,
         title: "PIX de R$ 1.000",
         category: "Crédito Financeiro",
         banner: `<div class="banner-svg-wrapper cash-banner">
